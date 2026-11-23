@@ -1,0 +1,17 @@
+/* Helpfully theme: neutral surfaces, ink typography, cobalt actions. */
+:root {
+  --color-canvas: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-ink: #20242c;
+  --color-muted: #697180;
+  --color-border: #e3e6ec;
+  --color-accent: #335cff;
+  --color-accent-hover: #2446cf;
+  --color-accent-soft: #eef2ff;
+  --radius-control: 8px;
+  --radius-panel: 12px;
+  --shadow-panel: 0 2px 6px #172b4d04;
+  --space-unit: 4px;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+}

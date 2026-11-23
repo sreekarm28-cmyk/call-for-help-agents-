@@ -1,0 +1,6 @@
+Agent: Do you handle low water pressure? The customer is near the bus stand.
+You: Usually, yeah. It's six hundred for a visit. My guy normally starts at ten.
+Agent: So should I tell them tomorrow at ten for six hundred?
+You: Which bus stand?
+Agent: The old one, near the market.
+You: Oh, no. We stopped going to that side. I can't take this job.

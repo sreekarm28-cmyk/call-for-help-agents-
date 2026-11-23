@@ -1,0 +1,27 @@
+{
+  "01-leaking-tap": {
+    "visit_fee": 500,
+    "visit_date": "tomorrow",
+    "visit_time": null
+  },
+  "02-ac-not-cooling": {
+    "visit_fee": 450,
+    "visit_date": "tomorrow",
+    "visit_time": "14:00"
+  },
+  "03-switch-repair": {
+    "visit_fee": null,
+    "visit_date": null,
+    "visit_time": null
+  },
+  "04-low-water-pressure": {
+    "visit_fee": null,
+    "visit_date": null,
+    "visit_time": null
+  },
+  "05-rewiring": {
+    "visit_fee": 250,
+    "visit_date": null,
+    "visit_time": null
+  }
+}

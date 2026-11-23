@@ -1,0 +1,6 @@
+Agent: Is this six hundred to fix the socket?
+You: No, six hundred to come and diagnose it. If it's only a loose wire, the visit includes that. New parts extra.
+Agent: The customer asked for Wednesday morning.
+You: I said Thursday to your colleague, but that slot's gone. Tomorrow at ten to five, at the end of my route.
+Agent: You mean tomorrow at four fifty p.m., with a six hundred rupee visit fee?
+You: Yeah, four fifty p.m. tomorrow. Six hundred is right.

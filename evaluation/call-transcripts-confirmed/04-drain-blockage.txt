@@ -1,0 +1,7 @@
+You: I can do Monday at nine. Visit will be three fifty, machine work maybe fifteen hundred.
+Agent: Monday at nine a.m.?
+You: Hold on, Monday at nine is the other booking. Tuesday at nine at night is open.
+Agent: Okay, should I confirm Tuesday at nine p.m. for three fifty?
+You: Tuesday nine p.m., yes. Three fifty is daytime. For an evening visit it's five hundred total for coming out, including the evening charge.
+Agent: Five hundred for the visit, machine work separate?
+You: That's right.

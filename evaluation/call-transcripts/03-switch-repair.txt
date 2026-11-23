@@ -1,0 +1,6 @@
+Agent: The customer said their budget is seven hundred. Can you check a switch that stopped working?
+You: If it's just the switch, the whole thing might be around seven hundred. Depends what I find.
+Agent: Okay, is there a separate three hundred visit charge?
+You: No, I haven't told you the visit charge. Send me the area first.
+Agent: Could you come Friday at six?
+You: Friday evening maybe, but I can't say six. Call me again before you tell them I'm coming.

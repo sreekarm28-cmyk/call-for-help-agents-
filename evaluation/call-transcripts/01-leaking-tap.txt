@@ -1,0 +1,7 @@
+You: Hello, yeah, tell me.
+Agent: I'm calling about a leaking kitchen tap. Can you come tomorrow afternoon?
+You: Yeah, I'll come at five for five hundred, tomorrow same time.
+Agent: Five p.m. tomorrow and five hundred rupees for the visit?
+You: No, wait, tomorrow morning. I can't say what time yet.
+Agent: Is the five hundred still for the visit?
+You: Yeah, just the visit. If it needs a new tap, that's separate.

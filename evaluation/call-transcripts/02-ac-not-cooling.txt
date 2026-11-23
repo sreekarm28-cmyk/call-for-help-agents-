@@ -1,0 +1,6 @@
+Agent: The AC runs but doesn't cool. How much would you charge to come take a look?
+You: Three hundred usually. Which area did you say?
+Agent: Indiranagar. The customer can do tomorrow from two.
+You: Oh, Indiranagar is four fifty for the check. I can get there at two, maybe around then.
+Agent: Can I put down two p.m. tomorrow?
+You: Yeah, two p.m. is fine. Four fifty is for checking it, the gas and all we'll see after.

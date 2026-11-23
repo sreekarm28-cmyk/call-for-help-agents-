@@ -1,0 +1,7 @@
+You: For the AC, a full service is twelve hundred. Just to come and check, six fifty.
+Agent: Can I put tomorrow at twelve thirty?
+You: Tomorrow I'm booked. Saturday around half past twelve, after lunch maybe.
+Agent: Could you commit to Saturday at one p.m. instead?
+You: Yeah, one p.m. Saturday works. Actually, if the customer is at that same building, make it six hundred for the inspection.
+Agent: Six hundred for checking, Saturday at one p.m.?
+You: Correct, lock those in. Cleaning is separate.

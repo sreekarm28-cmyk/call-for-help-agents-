@@ -1,0 +1,22 @@
+{
+  "languages": {
+    "en": "English", "hi": "Hindi", "te": "Telugu", "kn": "Kannada",
+    "ta": "Tamil", "ml": "Malayalam", "mr": "Marathi", "gu": "Gujarati",
+    "bn": "Bengali", "or": "Odia", "pa": "Punjabi", "as": "Assamese", "ne": "Nepali"
+  },
+  "states": {
+    "andhra pradesh": "te", "telangana": "te", "karnataka": "kn",
+    "tamil nadu": "ta", "kerala": "ml", "maharashtra": "mr",
+    "gujarat": "gu", "west bengal": "bn", "odisha": "or", "orissa": "or",
+    "punjab": "pa", "assam": "as", "sikkim": "ne", "tripura": "bn",
+    "arunachal pradesh": "en", "manipur": "en", "meghalaya": "en",
+    "mizoram": "en", "nagaland": "en", "goa": "en",
+    "bihar": "hi", "jharkhand": "hi", "chhattisgarh": "hi",
+    "haryana": "hi", "himachal pradesh": "hi", "madhya pradesh": "hi",
+    "rajasthan": "hi", "uttar pradesh": "hi", "uttarakhand": "hi",
+    "delhi": "hi", "new delhi": "hi", "chandigarh": "hi",
+    "jammu and kashmir": "hi", "ladakh": "hi", "puducherry": "ta",
+    "lakshadweep": "ml", "andaman and nicobar islands": "hi",
+    "dadra and nagar haveli and daman and diu": "gu"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "01-pressure-pump": { "visit_fee": 450, "visit_date": "friday", "visit_time": "07:15" },
+  "02-ac-water-leak": { "visit_fee": 600, "visit_date": "saturday", "visit_time": "13:00" },
+  "03-kitchen-socket": { "visit_fee": 600, "visit_date": "tomorrow", "visit_time": "16:50" },
+  "04-drain-blockage": { "visit_fee": 500, "visit_date": "tuesday", "visit_time": "21:00" },
+  "05-fan-repair": { "visit_fee": 300, "visit_date": "monday", "visit_time": "16:00" }
+}

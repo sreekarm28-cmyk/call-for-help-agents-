@@ -1,0 +1,571 @@
+.workspace {
+  --workspace-rail: 232px;
+  --workspace-bg: var(--color-canvas);
+  --workspace-surface: var(--color-surface);
+  --workspace-ink: var(--color-ink);
+  --workspace-accent: var(--color-accent);
+  --workspace-line: var(--color-border);
+  --workspace-muted-ink: var(--color-muted);
+  --workspace-sidebar: #ffffff;
+  --workspace-gold: var(--color-accent);
+  display: grid;
+  grid-template-columns: var(--workspace-rail) minmax(0, 1fr);
+  grid-template-rows: 56px 1fr;
+  min-height: 100dvh;
+  color: var(--workspace-ink);
+  background: var(--workspace-bg);
+  transition: grid-template-columns 220ms ease;
+}
+
+.workspace-collapsed { --workspace-rail: 68px; }
+.workspace-header {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 28px;
+  border-bottom: 1px solid var(--workspace-line);
+}
+
+.workspace-avatar {
+  display: grid;
+  flex: 0 0 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workspace-preview { color: var(--workspace-muted-ink); font-size: 13px; }
+.workspace button {
+  border: 1px solid var(--workspace-line);
+  border-radius: 8px;
+  padding: 8px 13px;
+  background: var(--workspace-surface);
+  color: var(--workspace-ink);
+  cursor: pointer;
+}
+
+.workspace button:hover { border-color: #aab6d4; }
+.workspace :is(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.workspace-header button { flex-shrink: 0; margin-left: 8px; font-size: 13px; }
+.workspace-sidebar {
+  border-right: 1px solid var(--workspace-line);
+  grid-area: 1 / 1 / 3 / 2;
+  overflow: hidden;
+  padding: 0 12px;
+  background: var(--workspace-sidebar);
+  color: var(--color-ink);
+}
+
+.workspace-brand {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 4px;
+}
+
+.workspace-mark {
+  display: grid;
+  flex: 0 0 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.workspace-wordmark {
+  font: 700 21px/1 'DM Sans', sans-serif;
+  letter-spacing: -.025em;
+}
+
+.workspace button.workspace-toggle {
+  display: grid;
+  flex: 0 0 32px;
+  height: 32px;
+  place-items: center;
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-muted);
+}
+
+.workspace-toggle svg { width: 17px; transition: transform 220ms ease; }
+.workspace-collapsed .workspace-toggle svg { transform: scaleX(-1); }
+.workspace-collapsed :is(.workspace-mark, .workspace-wordmark) { display: none; }
+.workspace-collapsed .workspace-brand { justify-content: center; }
+.workspace-collapsed button.workspace-toggle { margin-left: 0; }
+.workspace-nav { display: grid; gap: 5px; padding-top: 20px; }
+.workspace-nav button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 9px 11px;
+  text-align: left;
+  white-space: nowrap;
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.workspace-nav svg { flex: 0 0 19px; width: 19px; height: 19px; }
+.workspace-collapsed .workspace-nav span { display: none; }
+.workspace-sidebar button:hover,
+.workspace-nav button[aria-current="page"] { background: var(--color-accent-soft); border-color: var(--color-accent-soft); color: var(--color-ink); }
+.workspace-nav button[aria-current="page"] svg { color: var(--workspace-gold); }
+.workspace-sidebar button:focus-visible { outline-color: var(--workspace-gold); }
+
+.workspace-content {
+  grid-row: 2;
+  display: block;
+  min-width: 0;
+  grid-column: 2;
+  align-self: start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px 28px;
+}
+
+.workspace-content h1 {
+  margin: 0 0 12px;
+  font: 650 26px/1.3 'DM Sans', sans-serif;
+  letter-spacing: -.025em;
+}
+
+.workspace-content h2 { margin: 0; font-size: 16px; }
+.workspace-content p { margin: 5px 0 0; color: var(--workspace-muted-ink); }
+
+.workspace-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--workspace-line);
+}
+
+.workspace-tabs button {
+  border: 0;
+  border-radius: 7px 7px 0 0;
+  border-bottom: 2px solid transparent;
+  padding: 12px 15px;
+  background: transparent;
+  color: var(--workspace-muted-ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.workspace-tabs button:hover { background: #f0f2f6; }
+.workspace-tabs button[aria-pressed="true"] { border-bottom-color: var(--workspace-accent); color: var(--workspace-ink); }
+
+.workspace-panel {
+  width: 100%;
+  min-height: 180px;
+  border: 1px solid var(--workspace-line);
+  border-radius: var(--radius-panel);
+  padding: 16px clamp(16px, 3vw, 32px);
+  background: var(--workspace-surface);
+  box-shadow: var(--shadow-panel);
+}
+
+.workspace-sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
+.workspace-empty { display: grid; justify-items: start; gap: 16px; padding: 12px 0; text-align: left; }
+.workspace-empty > h2 { font: 600 18px/1.4 'DM Sans', sans-serif; }
+.workspace-empty-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+}
+
+.workspace-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 0; }
+.workspace-row + .workspace-row { border-top: 1px solid var(--workspace-line); }
+.workspace-badge { border-radius: var(--radius-panel); padding: 5px 10px; color: #244830; background: #e4eedc; font-size: 12px; }
+.workspace-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+.workspace button.workspace-primary { background: var(--workspace-accent); color: white; border-color: var(--workspace-accent); font-weight: 600; }
+.workspace button.workspace-primary:hover { background: var(--color-accent-hover); }
+.workspace-primary span { margin-left: 6px; color: inherit; }
+.workspace-content .workspace-notice { background: #eaf1e3; padding: 10px 12px; border-radius: 8px; margin: 12px 0; color: #214c35; }
+
+.workspace-provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  grid-auto-rows: 1fr;
+  align-content: start;
+  gap: 16px;
+}
+
+.workspace-provider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 170px;
+  padding: 20px;
+  border: 1px solid var(--workspace-line);
+  border-radius: var(--radius-panel);
+  background: var(--workspace-surface);
+  box-shadow: var(--shadow-panel);
+  overflow-wrap: anywhere;
+}
+
+.workspace-provider-card-header { display: flex; align-items: flex-start; gap: 12px; width: 100%; }
+.workspace-provider-card-header > div { flex: 1; min-width: 0; }
+.workspace-provider-card-header > .workspace-card-delete { flex: none; max-width: 42%; text-align: right; }
+.workspace-provider-card-header h2 { font-size: 18px; line-height: 1.3; }
+.workspace-provider-card-header p { font-size: 12px; }
+.workspace-provider-card-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+}
+.workspace .workspace-delete-provider-card {
+  padding: 5px 7px;
+  border-color: transparent;
+  background: transparent;
+  color: #a72d3a;
+  font-size: 12px;
+  font-weight: 650;
+}
+.workspace .workspace-delete-provider-card:hover { background: #fff0f1; border-color: #f1c9ce; }
+.workspace-provider-card .workspace-provider-card-status {
+  width: fit-content;
+  margin-top: 14px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: var(--color-canvas);
+  font-size: 12px;
+  font-weight: 550;
+}
+.workspace-provider-card .workspace-provider-card-status[data-status="completed"] {
+  background: #eaf4ee;
+  color: #226149;
+}
+.workspace-provider-card .workspace-provider-card-status[data-status="failed"] {
+  background: #fff0f1;
+  color: #a72d3a;
+}
+.workspace button.workspace-show-providers { margin-top: 16px; font-weight: 600; }
+.workspace-provider-card > .workspace-card-action { margin-top: auto; }
+.workspace-booking-choices { width: 100%; margin-top: 10px; }
+.workspace-booking-choices dl { margin: 0; display: grid; gap: 14px; }
+.workspace-booking-choices dl > div { padding-top: 12px; border-top: 1px solid var(--workspace-line); }
+.workspace-booking-choices dt { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+.workspace-booking-choices dt span { font-size: 11px; font-weight: 400; color: var(--workspace-muted-ink); }
+.workspace-booking-choices dd { margin: 5px 0 0; display: grid; gap: 3px; font-size: 14px; overflow-wrap: anywhere; }
+.workspace-booking-choices dd a { color: inherit; font-weight: 600; text-decoration: none; }
+.workspace-booking-choices dd a:hover { text-decoration: underline; }
+.workspace-booking-choices dd small { font-size: 12px; color: var(--workspace-muted-ink); }
+.workspace-choice-retry { margin-top: 10px; font-size: 12px; }
+.workspace-booking-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  grid-auto-rows: auto;
+  align-items: stretch;
+  gap: 20px;
+}
+.workspace-booking-card { padding: 24px; border-radius: 16px; gap: 16px; }
+.workspace-booking-card .workspace-provider-card-header { align-items: center; }
+.workspace-booking-eyebrow { display: block; margin-bottom: 4px; color: var(--workspace-muted-ink); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.workspace-booking-card .workspace-provider-card-header h2 { margin: 0; font-size: 19px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.workspace-booking-card .workspace-booking-status { margin: 0; padding: 5px 10px; border-radius: 20px; font-size: 11px; line-height: 1.5; }
+.workspace-booking-card .workspace-booking-status[data-status="confirmed"] { color: #226149; background: #eaf4ee; }
+.workspace-booking-card .workspace-booking-status[data-status="awaiting_provider_confirmation"],
+.workspace-booking-card .workspace-booking-status[data-status="pending"],
+.workspace-booking-card .workspace-booking-status[data-status="calling"] { color: #7b5714; background: #fff6df; }
+.workspace-booking-meta { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 16px; width: 100%; padding: 14px 0; border-top: 1px solid var(--workspace-line); border-bottom: 1px solid var(--workspace-line); }
+.workspace-booking-meta > div { display: grid; align-content: start; gap: 5px; min-width: 0; }
+.workspace-booking-meta span { font-size: 11px; color: var(--workspace-muted-ink); }
+.workspace-booking-meta strong { font-size: 13px; font-weight: 600; line-height: 1.5; }
+.workspace-booking-card .workspace-booking-choices { margin: 0; }
+.workspace-booking-card .workspace-booking-choices dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.workspace-booking-card .workspace-booking-choices dl > div { min-width: 0; min-height: 104px; padding: 14px; border: 1px solid var(--workspace-line); border-radius: 10px; background: var(--color-canvas); }
+.workspace-booking-card .workspace-booking-choices dt { font-size: 11px; color: var(--workspace-muted-ink); }
+.workspace-booking-card .workspace-booking-choices dd { margin-top: 9px; font-size: 13px; line-height: 1.5; }
+.workspace-booking-card .workspace-booking-choices dd small { font-size: 11px; line-height: 1.5; }
+.workspace-booking-choices-empty dd > span { font-weight: 500; }
+.workspace-booking-card .workspace-booking-choices .provider-attribution { display: block; margin-top: 8px; font-size: 10px; }
+.workspace-booking-card > .workspace-card-action { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; padding-top: 16px; border-top: 1px solid var(--workspace-line); }
+.workspace-booking-card .workspace-card-action > button.workspace-show-providers { flex: 1 1 140px; margin: 0; padding: 10px 12px; font-size: 13px; }
+.workspace-booking-card .workspace-card-action > button:last-of-type { color: white; background: var(--workspace-accent); border-color: var(--workspace-accent); }
+.workspace-booking-card .workspace-card-action > button:last-of-type span { color: inherit; }
+.workspace-booking-card .workspace-card-action > button:last-of-type:hover { background: var(--color-accent-hover); }
+@media (max-width: 520px) {
+  .workspace-booking-card { padding: 18px; }
+  .workspace-booking-card .workspace-booking-choices dl { grid-template-columns: 1fr; }
+  .workspace-booking-card .workspace-booking-choices dl > div { min-height: auto; }
+}
+.workspace-show-providers span { margin-left: 5px; color: var(--workspace-accent); }
+.workspace-provider-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  grid-auto-rows: 1fr;
+  gap: 12px;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+.workspace-provider-list li {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 140px;
+  padding: 15px;
+  border: 1px solid var(--workspace-line);
+  border-radius: var(--radius-panel);
+  background: var(--color-canvas);
+  font-size: 13px;
+}
+.workspace-provider-list h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+.workspace-provider-list li > :is(.workspace-provider-dialog-contact, .workspace-offer-actions) { margin-top: auto; }
+.workspace-provider-source { display: block; margin-top: 8px; }
+
+.workspace-provider-dialog {
+  width: min(800px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 24px;
+  border: 1px solid var(--workspace-line);
+  border-radius: 18px;
+  background: var(--workspace-surface);
+  color: var(--workspace-ink);
+  box-shadow: 0 20px 65px #0f172a33;
+}
+.workspace-provider-dialog::backdrop { background: #17233466; }
+.workspace-provider-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.workspace-provider-dialog-header h2 { font-size: 22px; line-height: 1.25; }
+.workspace .workspace-provider-dialog-header button { flex: none; font-size: 20px; line-height: 1; }
+.workspace-provider-dialog .workspace-provider-rating {
+  align-self: flex-start;
+  margin: 10px 0 0;
+  padding: 5px 9px;
+  border-radius: var(--radius-control);
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+  font-size: 13px;
+}
+.workspace-provider-dialog-contact {
+  padding-top: 12px;
+}
+.workspace-provider-dialog-contact a { color: var(--workspace-accent); font-weight: 600; }
+.workspace-provider-dialog-contact a span { display: block; margin-top: 4px; font-weight: 400; }
+.workspace-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+}
+.workspace-offer-actions button[aria-pressed="true"] {
+  border-color: var(--workspace-accent);
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+}
+.workspace-offer-confirm {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--workspace-line);
+}
+.workspace-booking-offer-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.workspace-booking-offer {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, .9fr);
+  align-items: start;
+  gap: 16px;
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid var(--workspace-line);
+  border-radius: var(--radius-panel);
+  background: var(--color-canvas);
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+.workspace-booking-offer h3 { margin: 0; font-size: 15px; }
+.workspace-booking-offer[data-choice="primary"] {
+  --choice-ink: #20583a;
+  --choice-fill: #dcefe3;
+  background: #f1f9f4;
+  border-color: #94c9a7;
+  box-shadow: inset 3px 0 #34835a;
+}
+.workspace-booking-offer[data-choice="backup"] {
+  --choice-ink: #795610;
+  --choice-fill: #f9edbc;
+  background: #fffbeb;
+  border-color: #dfc76b;
+  box-shadow: inset 3px 0 #c49a24;
+}
+.workspace-offer-choice-badge { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 9px; padding: 4px 9px; border-radius: 20px; background: var(--choice-fill); color: var(--choice-ink); font-size: 11px; font-weight: 650; }
+.workspace-booking-offer[data-choice] .workspace-offer-actions button[aria-pressed="true"] { background: var(--choice-fill); color: var(--choice-ink); border-color: currentColor; font-weight: 650; }
+.workspace-booking-offer[data-choice]:has(.workspace-offer-open:hover, .workspace-offer-open:focus-visible) { border-color: var(--choice-ink); }
+.workspace .workspace-offer-open {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--workspace-ink);
+  text-align: left;
+  font-weight: 650;
+}
+.workspace-offer-open::after { position: absolute; inset: 0; border-radius: var(--radius-panel); content: ""; }
+.workspace-booking-offer:has(.workspace-offer-open:hover, .workspace-offer-open:focus-visible) { border-color: var(--workspace-accent); }
+.workspace-offer-map, .workspace-booking-offer-choice button { position: relative; z-index: 1; }
+.workspace-offer-map { display: inline-block; margin-top: 7px; color: var(--workspace-accent); }
+.workspace-booking-offer-terms strong { color: var(--workspace-ink); font-size: 16px; }
+.workspace-booking-offer-choice .workspace-offer-actions { padding-top: 0; }
+.workspace-offer-state { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 7px; background: #fff6df; color: #7b5714; font-size: 12px; font-weight: 600; }
+.workspace-offer-state[data-ready="true"] { background: #eaf4ee; color: #226149; }
+.workspace-offer-selection-note, .workspace-booking-offer-choice .workspace-offer-actions small { font-size: 12px; line-height: 1.5; color: var(--workspace-muted-ink); }
+.workspace-booking-offer-choice .workspace-offer-actions small { flex-basis: 100%; }
+.workspace button.workspace-recall-provider { color: var(--workspace-accent); border-color: var(--workspace-accent); }
+.workspace-call-notice { padding: 12px; border-radius: 8px; background: var(--color-accent-soft); color: var(--workspace-accent); font-size: 13px; }
+.workspace-inline-transcript { position: relative; z-index: 1; margin-top: 12px; padding: 10px; border: 1px solid var(--workspace-line); border-radius: 8px; background: var(--workspace-surface); }
+.workspace-inline-transcript summary { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--workspace-accent); }
+.workspace-inline-transcript pre { max-height: 210px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin: 10px 0 0; font: inherit; font-size: 12px; line-height: 1.6; }
+.workspace .workspace-provider-dialog-header .workspace-offer-back {
+  margin-bottom: 8px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--workspace-accent);
+  font-size: 13px;
+}
+.workspace-offer-detail { margin-top: 18px; overflow: hidden; }
+.workspace-offer-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.workspace-offer-tabs button[aria-pressed="true"] {
+  border-color: var(--workspace-accent);
+  background: var(--color-accent-soft);
+  color: var(--workspace-accent);
+}
+.workspace-offer-text {
+  min-height: 120px;
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: var(--radius-panel);
+  background: var(--color-canvas);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+  animation: workspace-offer-slide 180ms ease-out;
+  --slide-from: -12px;
+}
+.workspace-offer-text[data-view="transcript"] { --slide-from: 12px; }
+@keyframes workspace-offer-slide {
+  from { opacity: 0; transform: translateX(var(--slide-from)); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .workspace-offer-text { animation: none; }
+}
+@media (max-width: 620px) {
+  .workspace-booking-offer { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .workspace-booking-offer-choice { grid-column: 1 / -1; }
+}
+
+.workspace-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.workspace-form fieldset { min-width: 0; border: 1px solid var(--workspace-line); background: var(--workspace-surface); padding: 16px; border-radius: 12px; }
+.workspace-form legend { font-weight: 700; padding: 0 5px; }
+.workspace-form label { display: grid; gap: 5px; font-size: 13px; margin: 7px 0; }
+.workspace-form input:not([type="checkbox"]), .workspace-form select, .workspace-form textarea {
+  width: 100%; min-width: 0; border: 1px solid var(--workspace-line); border-radius: 7px; padding: 8px; color: inherit; background: #ffffff;
+}
+.workspace-form textarea { resize: vertical; }
+.workspace-form .workspace-check { display: flex; align-items: center; gap: 7px; }
+.workspace-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+.workspace-form > .workspace-actions { grid-column: 1 / -1; margin-top: 0; }
+.workspace-muted { font-size: 12px; }
+.workspace-request { padding: 15px 0; }
+.workspace-request + .workspace-request { border-top: 1px solid var(--color-border); }
+.workspace-request > h2 { margin-bottom: 10px; }
+.workspace-booking-form .request-page { display: block; max-width: none; margin: 0; padding: 0; }
+.workspace-booking-form .request-card {
+  padding: 20px;
+  border: 1px solid var(--workspace-line);
+  border-radius: var(--radius-panel);
+  background: var(--workspace-surface);
+  box-shadow: var(--shadow-panel);
+}
+.workspace-form .remember-details,
+.workspace-form .booking-options > label { display: flex; align-items: flex-start; gap: 8px; }
+.workspace-form .booking-options { margin-top: 10px; }
+.workspace-form .share-options { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+@media (max-width: 450px) {
+  .workspace-fields, .workspace-form .address-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.workspace-preview { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 760px) { .workspace-form { grid-template-columns: minmax(0, 1fr); } }
+.workspace-booking { padding-block: 16px; }
+
+.workspace-booking-form .workspace-form { align-items: start; }
+.workspace-booking-form .workspace-form { gap: 28px; }
+.workspace-booking-form .workspace-form > fieldset { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+.workspace-booking-form .workspace-form legend { margin-bottom: 8px; padding: 0; font-size: 14px; color: var(--workspace-ink); }
+.workspace-booking-form .workspace-form label { margin: 6px 0; gap: 5px; font-size: 12px; font-weight: 550; }
+.workspace-booking-form .workspace-form input:not([type=radio],[type=checkbox]),
+.workspace-booking-form .workspace-form select,
+.workspace-booking-form .workspace-form textarea { min-height: 36px; padding: 7px 9px; }
+.workspace-booking-form .problem-options { margin: 4px 0; min-height: 0; }
+.workspace-booking-form .problem-options button { padding: 5px 9px; font-size: 12px; min-height: 30px; }
+.workspace-booking-form .problem-options button[aria-pressed="true"] { color: var(--workspace-accent); background: var(--color-accent-soft); border-color: #b9c7ff; }
+.workspace-booking-form .workspace-form input[type="checkbox"] { accent-color: var(--workspace-accent); }
+.workspace-booking-form .workspace-form textarea { height: 58px; resize: vertical; }
+.workspace-booking-form .workspace-form .share-options label { min-height: 24px; font-weight: 400; }
+.workspace-booking-form .workspace-form .remember-details { padding: 6px 8px; }
+.workspace-booking-form .workspace-form .workspace-sharing { margin: 6px 0 0; padding: 2px 0; border: 0; }
+.workspace-booking-form .workspace-form .workspace-sharing legend { padding: 0; font-size: 13px; }
+.workspace-booking-form .request-page .form-footer { justify-content: flex-end; margin: 16px 0 0; padding: 12px 0 0; border-top: 1px solid var(--workspace-line); background: transparent; }
+.workspace-booking-form .workspace-form .share-options { margin-top: 3px; gap: 4px 12px; }
+.workspace-booking-preferences { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+@media (max-width: 450px) {
+  .workspace-booking-preferences { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 620px) {
+  .workspace { --workspace-rail: 60px; position: relative; }
+  .workspace-sidebar {
+  border-right: 1px solid var(--workspace-line); z-index: 1; width: 208px; padding-inline: 8px; box-shadow: 10px 0 25px #ffffff33; }
+  .workspace-collapsed .workspace-sidebar {
+  border-right: 1px solid var(--workspace-line); width: 60px; box-shadow: none; }
+  .workspace-brand { height: 56px; }
+  .workspace-content {
+  grid-row: 2;
+  display: block;
+  min-width: 0; padding-inline: 12px; }
+  .workspace-tabs button { padding: 9px 8px; font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace, .workspace-toggle svg { transition: none; }
+}

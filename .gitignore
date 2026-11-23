@@ -1,0 +1,37 @@
+# Dependencies and build output
+node_modules/
+dist/
+.npm-cache/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Credentials (keep placeholder templates)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+service-account*.json
+
+# Local artifacts, recordings, and repository history backups
+/tmp/
+/output/
+/.local-git-backups/
+*.log
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.pcm
+*.pcap
+*.pcapng
+*.sql.gz
+*.dump
+
+# Editor and operating-system files
+.idea/
+.DS_Store
+Thumbs.db
