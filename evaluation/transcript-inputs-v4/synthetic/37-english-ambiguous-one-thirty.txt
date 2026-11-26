@@ -1,0 +1,12 @@
+Agent: Hi, is this Rapid Plumbing? A customer's toilet cistern keeps running.
+You: Yes, I can check. Visiting and inspection are three hundred and fifty.
+Agent: Does that include changing the mechanism?
+You: No, I'll quote that after checking. A small adjustment is included.
+Agent: Can you come tomorrow?
+You: Yes, tomorrow at one thirty.
+Agent: One thirty in the afternoon, right?
+You: Hello, what? There's a truck beside me.
+Agent: Tomorrow afternoon at one thirty, and three hundred and fifty to check?
+You: The fee is three fifty, yes. I'm not hearing the other part.
+Agent: Is the arrival afternoon or early morning?
+You: Just send your question as a message. I can't hear you now.

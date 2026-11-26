@@ -1,0 +1,122 @@
+[
+  {
+    "id": "location-01",
+    "address": "Outer Ring Rd, Veerabhadra Nagar, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085",
+    "expectedLocation": {
+      "latitude": 12.934827,
+      "longitude": 77.537381
+    }
+  },
+  {
+    "id": "location-02",
+    "address": "7, Bangalore - Magadi Main Rd, Kempegowdanagar, Byadarahalli, Bengaluru, Karnataka 560091",
+    "expectedLocation": {
+      "latitude": 12.985682,
+      "longitude": 77.478913
+    }
+  },
+  {
+    "id": "location-03",
+    "address": "Jalahalli, Bengaluru, Karnataka",
+    "expectedLocation": {
+      "latitude": 13.063477,
+      "longitude": 77.534963
+    }
+  },
+  {
+    "id": "location-04",
+    "address": "Whitefield, Bengaluru, Karnataka 560066",
+    "expectedLocation": {
+      "latitude": 12.966878,
+      "longitude": 77.749106
+    }
+  },
+  {
+    "id": "location-05",
+    "address": "Hoskote, Karnataka 562114",
+    "expectedLocation": {
+      "latitude": 13.073214,
+      "longitude": 77.795845
+    }
+  },
+  {
+    "id": "location-06",
+    "address": "Anantapur, Andhra Pradesh 515001",
+    "expectedLocation": {
+      "latitude": 14.661821,
+      "longitude": 77.605487
+    }
+  },
+  {
+    "id": "location-07",
+    "address": "Papampeta, Andhra Pradesh 515004",
+    "expectedLocation": {
+      "latitude": 14.707048,
+      "longitude": 77.592948
+    }
+  },
+  {
+    "id": "location-08",
+    "address": "Sector 20, Kharghar, Panvel, Maharashtra 410210",
+    "expectedLocation": {
+      "latitude": 19.049177,
+      "longitude": 73.073896
+    }
+  },
+  {
+    "id": "location-09",
+    "address": "Juhu Nagar, Sector 10A, Vashi, Navi Mumbai, Maharashtra 400703",
+    "expectedLocation": {
+      "latitude": 19.083491,
+      "longitude": 72.997189
+    }
+  },
+  {
+    "id": "location-10",
+    "address": "PES University back gate Parking",
+    "expectedLocation": {
+      "latitude": 12.934922,
+      "longitude": 77.532875
+    }
+  },
+  {
+    "id": "location-11",
+    "address": "sumdhura pranavam Hoodi, Seetharampalya, Mahadevapura, Bengaluru, Karnataka 560048",
+    "expectedLocation": {
+      "latitude": 12.988809,
+      "longitude": 77.714067
+    }
+  },
+  {
+    "id": "location-12",
+    "address": "Varthur Rd, near Renukeshwara Temple, Varthur, Bengaluru, Karnataka 560087",
+    "expectedLocation": {
+      "latitude": 12.936418,
+      "longitude": 77.745339
+    }
+  },
+  {
+    "id": "location-13",
+    "address": "Two Wheeler Transport, Bike Transport Service, Puppalaguda - Manikonda, near Bike Transport, Bike Parcel Service, Anjali Gardens, Shirdi Sai Nagar, Hyderabad, Telangana 500089",
+    "expectedLocation": {
+      "latitude": 17.404645,
+      "longitude": 78.377467
+    }
+  },
+  {
+    "id": "location-14",
+    "address": "Vediri Twp, Ameenpur, Miyapur, Hyderabad, Telangana 502033",
+    "expectedLocation": {
+      "latitude": 17.51751,
+      "longitude": 78.343071
+    }
+  },
+  {
+    "id": "location-15",
+    "address": "Rahamat Nagar, Anantapur, Andhra Pradesh 515001",
+    "expectedLocation": {
+      "latitude": 14.681921,
+      "longitude": 77.593158
+    }
+  }
+]

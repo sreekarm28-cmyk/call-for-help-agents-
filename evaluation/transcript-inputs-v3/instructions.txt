@@ -1,0 +1,15 @@
+ADDITIONAL SYNTHETIC TRANSCRIPTS - UNLABELED
+
+12 new invented conversations, 3 each in Hindi, Kannada, English and Malayalam. Each has 12 sequential speaker turns. IDs synthetic-21 through synthetic-32 do not overlap the previous set.
+
+Reference time for all these calls: November 26, 2026, 10:00 AM, Asia/Kolkata. All amounts are INR. Never use the previous set reference date for these examples.
+
+New situations: advance payment versus inspection price; per-item labour; travel surcharge; arrival versus job duration; withdrawn discount; unfinished amount; tax-inclusive inspection; a second shop representative correcting a quote; an unfinished exact-time proposal; inspection credited to the final bill; callback day versus visit day; and a repair quote withdrawn after a photo changes the job scope.
+
+Some exchanges resolve clearly and some remain uncertain. Two calls disconnect. Do not force a numeric fee or exact time from an unfinished answer. Conditional fees and shared totals must retain their conditions. Supplier estimates and example calculations are not automatically agreed repair prices.
+
+Expected answers, including enough_info, have NOT yet been added for this set. Existing 30 labeled cases and their answer keys are unchanged. This is extra challenge data, not evidence that the model improved. A fluent human should review non-English wording before finalizing reference labels.
+
+No external API calls or phone calls were made. No production prompt, database or UI was changed.
+
+SYNTHETIC DATA AUDIT: These 12 conversations were also read and translated where non-English. Review evaluation/transcript-audit/english-review.html. They remain unlabeled and cannot be scored. Same-assistant translations are not independent certification.

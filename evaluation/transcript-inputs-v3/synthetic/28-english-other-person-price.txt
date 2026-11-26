@@ -1,0 +1,12 @@
+Agent: Hi, have I reached Parkside Plumbing? A kitchen tap is leaking at a customer's home.
+You: Yes, I can ask my brother to come. I mostly sit at the shop.
+Agent: What would the charge be for coming and checking?
+You: My brother usually says three hundred. Wait, he's here, I'll put him on.
+You: Hello, I'm the one who visits. Where's the house?
+Agent: Near the lake entrance. Your brother said three hundred.
+You: Not over there. I charge four fifty to check. Three hundred was for the flats behind our shop.
+Agent: Does four fifty include repairing the tap?
+You: Only checking. I'll give the repair price after I see it. No work without asking them.
+Agent: Tomorrow morning at ten thirty?
+You: Yes, tomorrow ten thirty in the morning. Four hundred and fifty for checking.
+Agent: Thank you. I'll give the customer those terms.

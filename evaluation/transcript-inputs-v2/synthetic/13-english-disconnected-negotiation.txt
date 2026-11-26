@@ -1,0 +1,14 @@
+Agent: Hello, Greenline Plumbing? A customer has low water pressure in both bathrooms.
+You: Both? Could be the tank line. Is the kitchen okay?
+Agent: They haven't checked. Can you inspect it tomorrow?
+You: Tomorrow late morning, probably. I need the building location.
+Agent: It's close to the market. What's the visiting fee?
+You: Four hundred just to check. If I do the work, that comes off the labour bill.
+Agent: So four hundred plus the full labour charge?
+You: No, not plus. Say labour is a thousand, you pay another six hundred, not fourteen hundred.
+Agent: Is a thousand your repair quote for this job?
+You: That's an example. I haven't seen it.
+Agent: Could you make the inspection three hundred? And arrive at eleven?
+You: Eleven depends on the first job. About the three hundred, I can— [interrupted]
+Agent: Hello? Did you agree to three hundred?
+You: Wait, the signal here— [call disconnected]

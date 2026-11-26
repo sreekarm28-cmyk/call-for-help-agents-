@@ -1,0 +1,155 @@
+{
+  "datasetVersion": 3,
+  "description": "Additional synthetic extraction-evaluation inputs. Not real calls, not yet labeled or evaluated.",
+  "speakerRoles": {
+    "You": "service provider or other person answering the shop phone",
+    "Agent": "booking assistant"
+  },
+  "labelStatus": "unlabeled",
+  "cases": [
+    {
+      "id": "synthetic-21",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/21-hindi-deposit-not-fee.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "18f0cfbf8ee0d69e7ba60024920b8b07a4e5b17ac963da967e40ff657dcd9966"
+    },
+    {
+      "id": "synthetic-22",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/22-hindi-per-unit-correction.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "be0580e871d4850466e732d8a6fbe32d0dc3677becff3fc0a800f23a2e83ca1c"
+    },
+    {
+      "id": "synthetic-23",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/23-hindi-area-surcharge.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "66dbdbd2b19a5ebe6442392dd5258737341a31caf34d3d1578c1f44b768c8de1"
+    },
+    {
+      "id": "synthetic-24",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/24-kannada-arrival-versus-duration.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "2988f9fd18f71b3f61d6d6aa87e911f3845cf748a9962be307d0c53d22458c62"
+    },
+    {
+      "id": "synthetic-25",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/25-kannada-withdrawn-discount.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "b64fab66ff8a9668ce9aa11cbb914c5a74f11848d8a6b72bac2e269bf32bba46"
+    },
+    {
+      "id": "synthetic-26",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/26-kannada-call-cut-after-time.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": true,
+      "transcriptSha256": "1bd8259bffce74eeebe71908d7393735645a74262b1890fcda515ace1124d9ca"
+    },
+    {
+      "id": "synthetic-27",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/27-english-tax-not-visit.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "c48e06318457dcbc1ac5a3fa6bbfa242e9f80b306f7d41814880550e7acfdba4"
+    },
+    {
+      "id": "synthetic-28",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/28-english-other-person-price.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "a32b75a896cdda166a62bf54f2b218700917d4ee54253d74ec5764b918c3fb45"
+    },
+    {
+      "id": "synthetic-29",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/29-english-window-narrowed-then-cut.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": true,
+      "transcriptSha256": "2b5d5292774ddde45ed981ea12ec1cad567e102a4db22e93ac7f6f2cf17a2108"
+    },
+    {
+      "id": "synthetic-30",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/30-malayalam-credit-not-extra.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "a089c9d37d5206fef930ac1d8b31ea910c110af1133f5a355d3b12c5677b1e3b"
+    },
+    {
+      "id": "synthetic-31",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/31-malayalam-date-versus-callback.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "c923f14a113e91b7b5ab03bf9fe5476bc17b82f9a16603945f12086648bec392"
+    },
+    {
+      "id": "synthetic-32",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-26T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/32-malayalam-total-revised-scope.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false,
+      "transcriptSha256": "0b435f7231b7b6635ac6375f626c51498e7a4546c6d627a44ea79d45364a5fb3"
+    }
+  ]
+}

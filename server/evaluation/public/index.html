@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Helpfully · Transcript evaluations</title>
+  <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/location.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">helpfully <span>/ developer</span></a><span class="divider"></span><span>Evaluations</span><span class="local-badge">Local laptop only</span></header>
+  <main>
+    <nav class="eval-navigation" aria-label="Evaluation component"><a href="/" aria-current="page">Transcript</a><a href="/location.html">Location</a></nav>
+    <div class="page-heading"><div><h1>Transcript evaluation</h1><p>Compare extracted fields with your reference answers. Summary is evaluated separately.</p></div><span class="pill">Four-field evaluation</span></div>
+    <div id="error" class="alert error" role="alert" hidden></div>
+    <div id="notice" class="alert" role="status" hidden></div>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="input-heading">
+        <header class="panel-heading"><h2 id="input-heading">Test input</h2><span class="muted small">1. Add input and answer key</span></header>
+        <form id="evaluation-form" class="panel-body">
+          <fieldset id="inputs"><legend class="sr-only">Evaluation input</legend>
+            <div class="tabs" role="tablist" aria-label="Input method"><button id="manual-tab" type="button" role="tab" aria-selected="true" aria-controls="manual-panel">Enter manually</button><button id="upload-tab" type="button" role="tab" aria-selected="false" aria-controls="upload-panel">Upload dataset</button></div>
+            <div id="manual-panel" class="stack" role="tabpanel" aria-labelledby="manual-tab">
+              <label class="field">Conversation<textarea id="transcript" rows="5" maxlength="60000" spellcheck="false" placeholder="Agent: When can you come, and what is your fee?&#10;You: Tomorrow evening. Five hundred to visit."></textarea></label>
+              <p class="hint">The transcript and reference call date are sent to the model. Relative days are resolved using that date in Asia/Kolkata.</p>
+              <div class="section-label"><h3>Expected answers</h3><span class="muted small">Never sent to the model</span></div>
+              <div class="pair">
+                <div class="field"><label for="expected-fee">Visiting fee · INR</label><div class="answer"><input id="expected-fee" type="number" min="0" max="9999999999.99" step="0.01" placeholder="500"><label class="check"><input type="checkbox" id="fee-unknown" data-unknown="expected-fee">Unknown</label></div></div>
+                <div class="field"><label for="expected-date">Visit date</label><div class="answer"><input id="expected-date" type="date"><label class="check"><input type="checkbox" id="date-unknown" data-unknown="expected-date">Unknown</label></div></div>
+                <div class="field"><label for="expected-time">Exact arrival time</label><div class="answer"><input id="expected-time" type="time" disabled><label class="check"><input type="checkbox" id="time-unknown" data-unknown="expected-time" checked>Unknown</label></div></div>
+                <label class="field">Enough information?<select id="expected-enough"><option value="yes">Yes</option><option value="no">No</option></select></label>
+              </div>
+              <p class="hint">Yes means at least two clear details: visit day, useful arrival time/period, or an applicable fee. “Evening” counts as a period while exact time stays Unknown.</p>
+            </div>
+            <div id="upload-panel" class="stack" role="tabpanel" aria-labelledby="upload-tab" hidden>
+              <label class="field">Use a saved dataset<select id="saved-dataset"><option value="">Upload my own files</option></select></label>
+              <div id="file-inputs" class="stack">
+                <label class="upload"><strong>Conversation file</strong><span class="muted small">JSON or JSONL with id, transcript, calledAt and timezone.</span><input type="file" id="conversation-file" accept=".json,.jsonl,application/json"></label>
+                <label class="upload"><strong>Expected-label file</strong><span class="muted small">Matching id and expected answers for all four fields.</span><input type="file" id="label-file" accept=".json,.jsonl,application/json"></label>
+              </div>
+              <p class="hint">Maximum 100 cases. Disputed fields are excluded. The earlier 12 unlabeled conversations cannot be scored yet.</p>
+              <details class="help"><summary>File format examples</summary><p>Use a JSON array or one object per JSONL line. Existing answer files with a cases array are also accepted.</p><h4>Conversation</h4><pre>[{"id":"call-1","calledAt":"2026-11-26T10:00:00+05:30","timezone":"Asia/Kolkata","transcript":"Agent: When and how much?\nYou: Tomorrow evening, 500 to visit."}]</pre><h4>Expected labels</h4><pre>[{"id":"call-1","expected":{"visit_fee":500,"visit_date":"2026-11-27","visit_time":null,"enough_info":"yes"}}]</pre></details>
+            </div>
+          </fieldset>
+          <div class="action-row"><span class="muted small">2. Check records before API usage</span><button class="secondary" id="validate" type="button">Validate input</button></div>
+          <div id="validation" class="validation" role="status" hidden></div>
+          <label class="consent"><input id="api-consent" type="checkbox">Run sends these transcripts to Gemini and may use API quota or incur charges.</label>
+          <button class="primary" id="run" type="submit" disabled>Run evaluation</button>
+          <p id="model-info" class="hint">Loading model configuration…</p>
+        </form>
+      </section>
+      <section class="panel results-panel" aria-labelledby="results-heading">
+        <header class="panel-heading"><h2 id="results-heading">Results</h2><div class="result-actions"><button type="button" class="secondary" id="resume" hidden>Resume unfinished cases</button><a id="download" class="secondary" hidden>Download JSON</a></div></header>
+        <div class="panel-body">
+          <div class="result-head"><div><span id="overall-value" class="big-score">—</span><h3 id="overall-count">No evaluation run yet</h3></div><span id="run-status" class="pill">Ready</span></div>
+          <p id="run-progress" class="hint" aria-live="polite">Results will appear here after you run a test.</p>
+          <progress id="progress" max="1" value="0" hidden aria-label="Evaluation progress"></progress>
+          <div id="scores" class="score-grid" aria-label="Evaluation scores"></div>
+          <div><h3 class="block-heading">Accuracy by field</h3><div class="table-wrap"><table><thead><tr><th>Field</th><th>Accuracy</th><th>Correct / scored</th><th>Excluded</th></tr></thead><tbody id="field-scores"><tr><td colspan="4" class="muted">No scores yet.</td></tr></tbody></table></div></div>
+          <p id="coverage" class="hint">Every score shows its denominator. No denominator means N/A.</p>
+          <details class="help"><summary>What each score means</summary>
+            <dl><dt>Overall field accuracy — higher is better</dt><dd>Correct field values ÷ scored field values. Unknown matches Unknown. A failed model request counts as incorrect for its eligible fields.</dd>
+            <dt>Complete-case accuracy — higher is better</dt><dd>Cases with all four fields correct ÷ fully scorable attempted cases. Cases with disputed fields are outside this metric.</dd>
+            <dt>Invented-value rate — lower is better</dt><dd>Non-empty model values where the reference is Unknown ÷ Unknown reference slots with valid predictions. Includes fee, date and exact time. Model errors are reported separately.</dd>
+            <dt>Enough-info accuracy — higher is better</dt><dd>Correct Yes/No decisions ÷ scored decisions.</dd>
+            <dt>False Yes rate — lower is better</dt><dd>Predicted Yes when the reference is No ÷ reference-No cases with valid model decisions. This is not booking confirmation.</dd></dl>
+          </details>
+        </div>
+      </section>
+    </div>
+    <section class="panel" id="case-panel" hidden><header class="panel-heading"><div><h2>Conversations and mistakes</h2><p class="hint">Choose a case to inspect its transcript, expected fields and actual output.</p></div></header><div class="case-workspace"><div id="case-list" class="case-list" aria-label="Conversations"></div><div id="case-detail" class="case-detail"></div></div></section>
+    <section class="panel"><header class="panel-heading"><div><h2>Run history</h2><p class="hint">Saved on this laptop under output/evaluation-runs. Includes private transcript text; excluded from Git.</p></div><button class="secondary" id="refresh-history" type="button">Refresh</button></header><div class="table-wrap"><table><thead><tr><th>Started</th><th>Status</th><th>Cases</th><th>Field accuracy</th><th>Prompt</th><th>Inspect</th></tr></thead><tbody id="history"><tr><td colspan="6" class="muted">No saved runs yet.</td></tr></tbody></table></div></section>
+    <footer><span>Independent developer page · no database writes or telephone calls</span><span>Reference labels still require human review · no summary generation or scoring</span></footer>
+  </main>
+</body>
+</html>

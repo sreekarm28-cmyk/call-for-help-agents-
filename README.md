@@ -54,3 +54,15 @@ Phone calls require the separate Python agent and dispatcher; see the
 Keep credentials, real call recordings, and private customer data out of Git.
 The voice integration includes upstream code under its original
 [MIT license](LiveKit-Vobiz-Outbound/LICENSE).
+
+## Developer evaluations
+
+Run `npm run evals` and open http://127.0.0.1:3003 for separate Transcript
+and Location tabs. Manual input, dataset uploads, saved datasets, scores and
+downloadable run history are available. API requests require explicit Run consent.
+No database or telephone worker is needed.
+
+Use `npm run test:evaluations` for offline tests with mocked APIs. See
+[evaluation documentation](evaluation/README.md) for dataset status, formulas and
+historical results. Private real-call exports, `.env` files and local run results
+remain excluded from Git. Existing labels need review against the current policy.

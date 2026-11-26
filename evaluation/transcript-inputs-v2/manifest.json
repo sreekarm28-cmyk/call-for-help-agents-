@@ -1,0 +1,232 @@
+{
+  "datasetVersion": 2,
+  "description": "Synthetic service-enquiry conversations for offline extraction evaluation. No real calls made.",
+  "speakerRoles": {
+    "You": "service provider or person answering the shop phone",
+    "Agent": "booking assistant"
+  },
+  "labelStatus": "assistant_labeled_awaiting_human_review",
+  "cases": [
+    {
+      "id": "synthetic-01",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/01-hindi-combined-charge.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-02",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/02-hindi-corrected-amount.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-03",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/03-hindi-cut-before-price.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": true
+    },
+    {
+      "id": "synthetic-04",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/04-hindi-midnight-change.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-05",
+      "source": "synthetic",
+      "language": "hindi",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/05-hindi-wrong-person.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-06",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/06-kannada-no-separate-visit.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-07",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/07-kannada-total-versus-labour.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-08",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/08-kannada-interrupted-correction.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": true
+    },
+    {
+      "id": "synthetic-09",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/09-kannada-date-correction.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-10",
+      "source": "synthetic",
+      "language": "kannada",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/10-kannada-service-refusal.txt",
+      "turnCount": 12,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-11",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/11-english-one-bill.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-12",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/12-english-reversed-price.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-13",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/13-english-disconnected-negotiation.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": true
+    },
+    {
+      "id": "synthetic-14",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/14-english-conflicting-day.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-15",
+      "source": "synthetic",
+      "language": "english",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/15-english-no-commitment.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-16",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/16-malayalam-combined-payment.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-17",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/17-malayalam-corrected-slot.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-18",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/18-malayalam-cut-mid-quote.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": true
+    },
+    {
+      "id": "synthetic-19",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/19-malayalam-conditional-discount.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    },
+    {
+      "id": "synthetic-20",
+      "source": "synthetic",
+      "language": "malayalam",
+      "calledAt": "2026-11-25T10:00:00+05:30",
+      "timezone": "Asia/Kolkata",
+      "currency": "INR",
+      "transcriptFile": "synthetic/20-malayalam-relative-day-withdrawn.txt",
+      "turnCount": 14,
+      "endedWithDisconnect": false
+    }
+  ],
+  "expectedLabelsFile": "expected-labels.json"
+}

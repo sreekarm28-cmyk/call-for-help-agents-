@@ -1,0 +1,12 @@
+Agent: Hello, West Gate Electricians? The customer needs a doorbell checked.
+You: Yes. Is this the house behind the supermarket?
+Agent: No, across the railway bridge. What is the inspection fee?
+You: Usually four hundred, but that side is farther. Let me check where it is.
+Agent: Can you do tomorrow morning at eleven?
+You: Yes, tomorrow at eleven in the morning, that time is okay.
+Agent: Shall I write four hundred for coming and checking?
+You: Not yet. That was the usual nearby price. Your place will be different.
+Agent: Does the checking fee include any repair?
+You: No, repair is separate. For coming to that location, it will be five— [interrupted]
+Agent: Five hundred?
+You: Hello? I can't hear that. I'll send the amount after— [call disconnected]

@@ -37,11 +37,12 @@ function installGoogleMocks() {
           evidence: [evidence],
         }) }] } }] });
       }
-      assert.match(inputText, /^Call date: \d{4}-\d{2}-\d{2} \(Asia\/Kolkata\)\n\nAgent:/);
+      const referenceDate = /^Reference call date: (\d{4}-\d{2}-\d{2}) \(Asia\/Kolkata\)\n\nAgent:/.exec(inputText);
+      assert.ok(referenceDate, 'Extraction receives a reference call date.');
       assert.match(inputText, /You: The visit is ₹350/);
       assert.ok(body.systemInstruction.parts[0].text.includes('repair'));
       if (++extractionCalls === 1) return new Response(null, { status: 503 });
-      const tomorrow = new Date(inputText.slice(11, 21) + 'T00:00:00Z');
+      const tomorrow = new Date(referenceDate[1] + 'T00:00:00Z');
       tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
       return Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify({
         provider_response: 'offer_received', visit_fee: 350, fee_covers: 'Inspection',

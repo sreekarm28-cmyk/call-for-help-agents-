@@ -1,4 +1,44 @@
-# Call transcript extraction evaluation
+# Developer evaluations
+
+Run `npm run evals`, then open http://127.0.0.1:3003. Use the Transcript and Location
+tabs. This developer tool runs locally without PostgreSQL, Docker or phone workers.
+Validate inputs before running; model/Google requests require explicit API consent.
+
+Run `npm run test:evaluations` for mocked transcript, location, retry, resume,
+persistence and HTTP tests. `node --import tsx --test tests/location-validation.ts`
+checks the production distance and mismatch-choice helper without external requests.
+Tests verify implementation behaviour; they do not establish live model accuracy.
+
+## Data and scope
+
+| Files | Purpose |
+| --- | --- |
+| `transcript-inputs-v2/`, `transcript-inputs-v4/` | 38 labeled synthetic cases for the current transcript evaluator |
+| `transcript-inputs-v3/` | 12 additional unlabeled synthetic cases; excluded from scores |
+| `upload-dataset/` | Convenient JSON conversation/label pair for the 38 cases |
+| `transcript-audit/` | English review translations and known label ambiguities; self-review, not independent validation |
+| `feedback-regressions/` | Focused extraction examples; review labels when changing policy |
+| `enough-info-policy.json` | Current two-of-three policy: supported day, arrival time/period, applicable fee |
+| `location-cases.json` | 15 user-collected reference addresses/pins; broad-area cases need manual review |
+| `call-transcripts*/`, `call-offer*-expected.json` | Historical three-field experiments described below |
+| `evaluate-provider-search.ts` | Optional live provider-search inspection CLI; not part of offline tests |
+
+Existing synthetic `enough_info` labels predate the current two-of-three policy.
+Review them before interpreting accuracy under policy 4; they are not silently
+rewritten to agree with predictions. Historical scores below are not current
+four-field, real-call, or production accuracy claims.
+
+Private real-call exports and run results stay in Git-ignored `output/`.
+Transcript runs save prompt/model metadata, retries, tokens and results there.
+Location runs save each processed case, distance, timing and technical errors.
+The server never starts a model/API evaluation automatically on restart.
+
+Location accuracy is positive cases within 500 metres divided by all positive
+cases, including failed lookups. Invalid-address rejection, false acceptance,
+successful-lookup median distance and response time are reported separately.
+The production mismatch persistence/worker integration is a separate product test.
+
+## Historical call transcript extraction evaluation
 
 Gemini 3.5 Flash-Lite (`gemini-3.5-flash-lite`) matched **30 of 30 expected fields across 10 synthetic service-booking calls**. Two live API runs each evaluated five calls with the same system prompt and response schema.
 

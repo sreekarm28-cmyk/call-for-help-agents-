@@ -1,0 +1,12 @@
+Agent: Hello, Maple Plumbing? A customer says water is leaking beside the bathroom pipe.
+You: Okay, we do bathroom fittings. Visiting is three hundred.
+Agent: Can you come tomorrow afternoon?
+You: Probably. Is it the tap connection or inside the wall?
+Agent: They've just sent a message. The wall is damp and the tile will need opening.
+You: Ah, that's not a fitting replacement then. We don't open walls or do that concealed-line work.
+Agent: Could you at least come and inspect it for the three hundred?
+You: No, sorry. I can't take this one. They need someone who does that work and puts the tiles back.
+Agent: Could your colleague come instead?
+You: He's only doing fittings too. Don't book either of us for this.
+Agent: Understood. So the earlier visiting price isn't an offer for this job?
+You: Right. I'm not coming for this one.

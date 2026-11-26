@@ -1,0 +1,14 @@
+Agent: Hello, is this Metro Plumbing Repairs?
+You: Yes, but I'm driving. Be quick.
+Agent: There's a leaking pipe under a customer's sink. Would you take that job?
+You: Usually, yes. Depends where it is.
+Agent: Near Central Park. Can you come tomorrow morning?
+You: I might. I'm meant to be out of town, but that may get cancelled.
+Agent: What's your usual visiting fee?
+You: Usually three hundred around the shop. Central Park is farther, so I haven't quoted that yet.
+Agent: Shall I save three hundred and tomorrow at ten?
+You: No, neither of those is confirmed. I'll know tonight whether I'm even here.
+Agent: Okay, can we call you again this evening?
+You: Yes, call after seven. That's when to call me, not when I'm coming to the house.
+Agent: Understood. I'll wait for your availability before promising the customer anything.
+You: Fine. I need to go now.

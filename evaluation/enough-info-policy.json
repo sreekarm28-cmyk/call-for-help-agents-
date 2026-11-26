@@ -1,0 +1,35 @@
+{
+  "version": 4,
+  "field": "enough_info",
+  "allowedValues": [
+    "yes",
+    "no"
+  ],
+  "meaning": "Enough basic information for a customer to assess a provider, not enough to automatically confirm a booking.",
+  "yes_requires": [
+    "A supported provider offer to visit",
+    "At least two independent clear details: visit day, useful arrival time/period, applicable fee or total-job quote"
+  ],
+  "not_required": [
+    "An exact clock time when a clear arrival period is available",
+    "A separate visit fee when a clear total-job quote is available",
+    "A fixed repair price when only an inspection is being offered",
+    "An already confirmed booking"
+  ],
+  "no_when": [
+    "Fewer than two supported details",
+    "The provider declines or willingness is unclear",
+    "Do not count tentative, withdrawn, contradicted or unaccepted details, callback times, customer budgets, arithmetic examples or unknown conditional fees"
+  ],
+  "fee_rule": "Keep visit fees, separate repair prices and combined totals distinct. A clear total-job estimate can qualify, but preserve its estimated nature and inclusions. Never relabel a combined quote as a visit fee or invent a repair amount by subtraction. An inspection fee credited or waived when work is done can qualify if that condition is clear. Zero is a known fee, not missing data.",
+  "date_rule": "Resolve relative dates using the supplied call date in Asia/Kolkata. Do not silently fix contradictory dates or unusual explicit years.",
+  "exact_fields_rule": "Keep visit_time null for a broad period or window even when enough_info is yes. Keep visit_fee null if only a combined job total is quoted. This policy does not alter extraction facts to make a case qualify.",
+  "uncertainty_rule": "Assistant-authored labels still require human review. A yes on a case marked needs_adjudication is provisional, not approved ground truth.",
+  "scope": "Current evaluation prompt policy. Existing saved labels and run results are not automatically relabeled; review old enough_info labels under this policy. No change to booking confirmation or production eligibility.",
+  "accepted_pairs": [
+    "day + time/period",
+    "day + fee",
+    "time/period + fee"
+  ],
+  "missing_fields_review": "Re-read the transcript only for missing fields. Fill them only with supported information; retain supported values, leave unresolved fields null, then apply the two-of-three rule. No additional API call."
+}

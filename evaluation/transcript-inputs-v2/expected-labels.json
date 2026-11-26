@@ -1,0 +1,926 @@
+{
+  "policy": {
+    "version": 3,
+    "enough_info": {
+      "type": "string enum: yes | no",
+      "meaning": "Enough basic information for a customer to assess a provider, not enough to automatically confirm a booking.",
+      "yes_requires": [
+        "A supported provider offer to visit",
+        "A clear visit day resolved against the case call date",
+        "A supported useful arrival period: exact time, a time window, morning, afternoon, evening, night, or after lunch",
+        "A clear applicable visit/inspection fee or total-job quote, including an explicitly free inspection"
+      ],
+      "not_required": [
+        "An exact clock time when a clear arrival period is available",
+        "A separate visit fee when a clear total-job quote is available",
+        "A fixed repair price when only an inspection is being offered",
+        "An already confirmed booking"
+      ],
+      "no_when": [
+        "Only a day is given without any useful arrival period",
+        "The day or arrival period is withdrawn, tentative, contradicted, or not clearly accepted",
+        "Only a customer budget, unrelated transaction, historical rate, arithmetic example, or withdrawn quote supplies the amount",
+        "The applicable fee depends on unresolved eligibility or another unknown condition",
+        "The provider declines the work or does not make a clear visit offer"
+      ],
+      "fee_rule": "Keep visit fees, separate repair prices and combined totals distinct. A clear total-job estimate can qualify, but preserve its estimated nature and inclusions. Never relabel a combined quote as a visit fee or invent a repair amount by subtraction. An inspection fee credited or waived when work is done can qualify if that condition is clear. Zero is a known fee, not missing data.",
+      "date_rule": "Resolve relative dates using the supplied call date in Asia/Kolkata. Do not silently fix contradictory dates or unusual explicit years.",
+      "exact_fields_rule": "Keep visit_time null for a broad period or window even when enough_info is yes. Keep visit_fee null if only a combined job total is quoted. This policy does not alter extraction facts to make a case qualify.",
+      "uncertainty_rule": "Assistant-authored labels still require human review. A yes on a case marked needs_adjudication is provisional, not approved ground truth.",
+      "scope": "Evaluation labels only. No change to database, production extraction prompt, UI selection eligibility, call permissions, or booking confirmation."
+    },
+    "numeric_rule": "Never convert combined totals to separate repair fees or infer a repair amount by subtraction. Separate conditional labour estimates may be captured with their caveats. General prices for other jobs are not quotes.",
+    "answered_rule": "An answered but unclear/disconnected call is not no_answer. offer_received may have missing fields; use needs_clarification if willingness itself is tentative or unclear.",
+    "evidence_rule": "Evidence excerpts must be exact provider text. Explicit clear provider confirmation may support the immediately preceding agent recap, but garbled or unrelated speech does not.",
+    "text_scoring": "Compare summary, fee_covers, repair_cost_notes and availability_as_said semantically; do not require exact wording. Evidence must be an exact provider quote; valid supporting quote sets may differ.",
+    "label_limit": "Assistant-authored reference labels, not independently verified ground truth. Human approval is pending for all cases. needs_adjudication marks material ambiguities requiring explicit review before strict scoring. Do not use old extracted database fields as truth."
+  },
+  "cases": [
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": null,
+        "fee_covers": "No separate visit charge if the work is done; a travel charge applies if no work is authorized, but its amount is not quoted.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "One combined job bill, quoted after inspection. The customer budget and the agent-suggested 500 are not quotes.",
+        "visit_date": "2026-11-26",
+        "visit_time": null,
+        "availability_as_said": "कल आ जाऊँगा। पहले जो साइट है वह खत्म करूँगा, फिर निकलूँगा।",
+        "summary": "Will come tomorrow after another job and call before leaving. No exact arrival time or inspection-only amount is agreed; work is charged as one bill.",
+        "evidence": [
+          "नहीं, पाँच सौ मैंने नहीं बोला। पहले देखकर बताऊँगा, पूरा काम मिलाकर।",
+          "समय मत लिखो अभी। निकलते समय फोन कर दूँगा।"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "The provider rejects both the invented 500 visit fee and an exact 13:00 arrival. Inspection-only travel cost remains unknown.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-01",
+      "transcriptSha256": "12b0b45a8be24982c6f6e9f4c9b831d2c43e1a7c37d2462bb65a7ad7d975ee56",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 250,
+        "fee_covers": "Visit and inspection; tightening alone is included. Replacement labour and materials are separate.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Replacement labour is quoted separately; materials are extra. No repair amount is quoted.",
+        "visit_date": "2026-11-26",
+        "visit_time": "10:30",
+        "availability_as_said": "साढ़े दस कर लो, सुबह।",
+        "summary": "Agrees to tomorrow at 10:30 AM for a 250 inspection fee. Simple tightening is included; replacement labour and materials cost extra.",
+        "evidence": [
+          "अरे नहीं, दो सौ पचास। हजार नहीं। बस देखने का इतना है।",
+          "सिर्फ कसने से ठीक हुआ तो उसी में। बदलना पड़ा तो मजदूरी अलग बताऊँगा। सामान भी अलग।",
+          "हाँ, यही लिखो। बिना बताए काम नहीं करूँगा।"
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "The provider explicitly corrects 2500 to 250 and confirms the final morning time and inspection terms.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-02",
+      "transcriptSha256": "db894c9b0742142f4cdc4580010f55515be0bccf00000b75d6ba133d38a9ebba",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "10:30",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 250,
+          "currency": "INR",
+          "qualifications": "Visit and inspection; tightening alone is included. Replacement labour and materials are separate."
+        },
+        "rationale": "Clear visit day, exact time and applicable inspection fee support basic user review."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": null,
+        "fee_covers": null,
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "800 is a usual total for a small cleaning job, explicitly not a quote for this job. Machine work would cost differently.",
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": null,
+        "summary": "The call disconnects before the inspection-only charge or availability is agreed. The normal 800 small-cleaning price does not apply to this job.",
+        "evidence": [
+          "नहीं सुनो, वह छोटी सफाई का पूरा है। तुम्हारे में मशीन लगी तो अलग होगा।",
+          "आने का अगर काम नहीं हुआ तो दो— [interrupted]",
+          "हेलो, नेटवर्क जा रहा है। मैं अभी— [call disconnected]"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "A cut-off दो— is not a completed 200 quote; the agent question does not supply missing digits or consent.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-03",
+      "transcriptSha256": "82d89fb7da55e4c9e21109cccdf635672ac006f75a2dcdff2e9a454590ce9b26",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": null,
+        "fee_covers": "Inspection only. 700 was the night rate and 400 the day rate; no final visit arrangement is agreed.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Repair price is not quoted.",
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "फीस दिन की चार सौ है, लेकिन कौन से दिन आऊँगा अभी नहीं बता सकता। पहले ग्राहक से पूछो।",
+        "summary": "Withdraws the proposed overnight visit. A daytime inspection would be 400, but neither a final day nor a time is agreed.",
+        "evidence": [
+          "रुको, रात में मत रखो। घर में बच्चे होंगे। दिन में कोशिश करूँगा।",
+          "फीस दिन की चार सौ है, लेकिन कौन से दिन आऊँगा अभी नहीं बता सकता। पहले ग्राहक से पूछो।"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "Night terms are withdrawn and the daytime alternative is tentative. Do not publish either tariff as an unconditional agreed visit fee.",
+      "needs_adjudication": true,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-04",
+      "transcriptSha256": "f9b8b4cfa63cc246e85660df8b07b0c9500822c958b56bc91cca69892cb83bba",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "requires_human_adjudication",
+        "exclude_from_strict_scoring": [
+          "visit_fee"
+        ],
+        "reason": "After withdrawing the night visit, the provider still explicitly states a daytime inspection tariff of 400. The existing label leaves visit_fee null because no daytime visit is settled. A reviewer could reasonably retain 400 as a quoted daytime fee independent of scheduling. The wording must be adjudicated before scoring this field. enough_info stays no because no day or arrival period is agreed.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": null,
+        "fee_covers": null,
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": null,
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "हाँ, दुकान दस बजे खुलती है।",
+        "summary": "A neighbouring shopkeeper answers, not the plumber. A historical 300 payment is not a quote, and 10 AM is the shop opening time, not a home visit.",
+        "evidence": [
+          "नहीं भाई, मेरी बात अलग थी। वह खुद बताएगा।",
+          "अरे दुकान खुलती है बोला। मैं प्लंबर नहीं हूँ। तुम फिर फोन करना।"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "No authorized provider quote or visit offer exists. The caller is answered, so no_answer is incorrect.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-05",
+      "transcriptSha256": "ebce07f8aee1a7d2ac2297fe88936ac1224edb9fe41eab21f469baa2773143a1",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 100,
+        "fee_covers": "100 for inspection only if no repair is authorized; no separate visit charge if the work is done.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "A washer-only repair may cost up to 300; this is a conditional total job estimate, not a separate repair quote. Tap replacement costs differently.",
+        "visit_date": "2026-11-26",
+        "visit_time": null,
+        "availability_as_said": "ನಾಳೆ ಸಂಜೆ ಬರ್ತೀನಿ, ಐದು ಇಲ್ಲ ಆರು ಆಗಬಹುದು. ಟ್ರಾಫಿಕ್ ಹೇಗಿರುತ್ತೋ.",
+        "summary": "Will come tomorrow evening, possibly five or six, and call before leaving. Inspection-only costs 100; completed work has no separate visit charge.",
+        "evidence": [
+          "ಕೆಲಸ ಮಾಡಿಸಿದರೆ ಬೇರೆ ವಿಸಿಟ್ ಚಾರ್ಜ್ ಇಲ್ಲ. ಬರೀ ನೋಡಿ ವಾಪಸ್ ಕಳಿಸಿದರೆ ನೂರು ಕೊಡಬೇಕು.",
+          "ನಾಳೆ ಸಂಜೆ ಬರ್ತೀನಿ, ಐದು ಇಲ್ಲ ಆರು ಆಗಬಹುದು. ಟ್ರಾಫಿಕ್ ಹೇಗಿರುತ್ತೋ."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "Use the stated inspection-only charge with its waiver condition. Five or six is not an exact arrival time. Do not invent a lower bound for the washer estimate.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-06",
+      "transcriptSha256": "d1339cfbcd9c0a362abb3dc242e4aaab27202bc80136efde9f9dc2d6b998eabd",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "tomorrow evening, around five or six",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 100,
+          "currency": "INR",
+          "qualifications": "100 for inspection only if no repair is authorized; no separate visit charge if the work is done."
+        },
+        "rationale": "The provider offers tomorrow evening; an exact hour is not needed. The inspection-only 100 and waiver for completed work are clear."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 200,
+        "fee_covers": "200 for inspection only; not added again if repair work is done.",
+        "repair_fee_min": 600,
+        "repair_fee_max": 600,
+        "repair_cost_notes": "600 is a tentative labour quote for both fans together, including the visit, not an additional 200 plus 600. Parts are extra and motor damage changes the quote.",
+        "visit_date": "2026-11-26",
+        "visit_time": "11:30",
+        "availability_as_said": "ಹನ್ನೊಂದು ಬೇಡ, ಹನ್ನೊಂದೂವರೆ ಮಾಡೋಣ. ಬೆಳಿಗ್ಗೆ.",
+        "summary": "Confirms tomorrow at 11:30 AM. Inspection-only is 200; tentative labour for both fans is 600 including the visit, with parts extra and motor damage excluded.",
+        "evidence": [
+          "ಆಗ ಇನ್ನೂರು. ಕೆಲಸ ಮಾಡಿದರೆ ಆ ಇನ್ನೂರು ಮತ್ತೆ ಸೇರಿಸಲ್ಲ.",
+          "ಹನ್ನೊಂದು ಬೇಡ, ಹನ್ನೊಂದೂವರೆ ಮಾಡೋಣ. ಬೆಳಿಗ್ಗೆ.",
+          "ಟೈಮ್ ಪಕ್ಕಾ. ಹಣ ಈಗಲೇ ಫಿಕ್ಸ್ ಮಾಡಬೇಡಿ, ಮೋಟರ್ ಸುಟ್ಟಿದ್ದರೆ ಆ ಕೆಲಸಕ್ಕೆ ಆಗಲ್ಲ."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "The exact slot and inspection charge are known. Repair certainty is not required, but the 600 estimate must retain its condition and must not be double-counted.",
+      "needs_adjudication": true,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-07",
+      "transcriptSha256": "d049d360bd6b5886b51dfe141e466ecce21baabcb92c0d60f5bbc5016471cb7e",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "11:30",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 200,
+          "currency": "INR",
+          "qualifications": "200 for inspection only; not added again if repair work is done."
+        },
+        "rationale": "Clear visit day, exact time and applicable inspection fee support basic user review."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "requires_human_adjudication",
+        "exclude_from_strict_scoring": [
+          "repair_fee_min",
+          "repair_fee_max"
+        ],
+        "reason": "The 600 is explicitly labour for both fans but includes coming, while 200 applies only to inspection without work. Existing bounds retain 600 with that condition. The current separately quoted repair-field definition may instead require leaving bounds null and describing 600 only in notes. Decide this representation before strict scoring. The clear date, exact time and inspection-only 200 still make enough_info yes.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": null,
+        "fee_covers": "Inspection, but the earlier 400 fee is withdrawn and its replacement is cut off.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": null,
+        "visit_date": "2026-11-26",
+        "visit_time": "15:00",
+        "availability_as_said": "ಇವತ್ತು ಆಗಲ್ಲ, ನಾಳೆ ಮೂರು ಗಂಟೆಗೆ ಬರುತ್ತೀನಿ.",
+        "summary": "Offers tomorrow at 3 PM. Withdraws the 400 inspection quote after clarifying the location, then disconnects before stating a replacement.",
+        "evidence": [
+          "ಇವತ್ತು ಆಗಲ್ಲ, ನಾಳೆ ಮೂರು ಗಂಟೆಗೆ ಬರುತ್ತೀನಿ.",
+          "ಓ ಆ ಕಡೆನಾ, ಆಗ ನಾಲ್ಕು ನೂರು ಅಲ್ಲ, ಫೀ— [interrupted]"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "The interrupted correction cancels the earlier amount. The agent-suggested 500 is not accepted. Afternoon context resolves three as 15:00.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-08",
+      "transcriptSha256": "1b42c86931fdd61c8fcc54b11d0edfe85bc018b93383a6932ba96f461064ca1c",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "15:00",
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 300,
+        "fee_covers": "Inspection and a minor connection fix; materials and larger labour may be extra.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Will quote larger repair work first; replacement wire and possibly additional labour are separate.",
+        "visit_date": "2026-11-27",
+        "visit_time": "18:00",
+        "availability_as_said": "ಇಲ್ಲ, ಇಪ್ಪತ್ತೇಳು. ಶುಕ್ರವಾರ ಸಂಜೆ ಆರು.",
+        "summary": "Confirms Friday November 27 at 6 PM. Inspection is 300 including a small connection fix; larger work and materials are quoted separately.",
+        "evidence": [
+          "ಇಲ್ಲ, ಇಪ್ಪತ್ತೇಳು. ಶುಕ್ರವಾರ ಸಂಜೆ ಆರು.",
+          "ಮುನ್ನೂರು ನೋಡುವುದಕ್ಕೆ. ಚಿಕ್ಕ ಕನೆಕ್ಷನ್ ಸರಿಮಾಡಿದರೆ ಅದರಲ್ಲಿ ಆಗುತ್ತದೆ.",
+          "ಹೌದು, ಆರು ಗಂಟೆಗೆ ಬರ್ತೀನಿ. ಈಗ ಕೆಲಸ ಇದೆ, ಫೋನ್ ಇಡ್ತೀನಿ."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "The provider explicitly corrects the date to the 27th and confirms the final time.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-09",
+      "transcriptSha256": "f56942cb41e5496296780ff23da3bd53bea1beaf2a950bece8e1700bd76025a6",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "18:00",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 300,
+          "currency": "INR",
+          "qualifications": "Inspection and a minor connection fix; materials and larger labour may be extra."
+        },
+        "rationale": "Clear visit day, exact time and applicable inspection fee support basic user review."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "declined",
+        "visit_fee": null,
+        "fee_covers": null,
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": null,
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": null,
+        "summary": "Declines the underground drain job because it needs machinery they do not provide. No visit or job-specific quote is accepted.",
+        "evidence": [
+          "ಅದು ನಮ್ಮಿಂದ ಆಗಲ್ಲ. ಮೆಷಿನ್ ಇರುವವರನ್ನು ಕರೆಸಿ.",
+          "ಇಲ್ಲ, ನಮ್ಮ ಹುಡುಗನನ್ನೂ ಕಳಿಸಲ್ಲ. ನೀವು ಬೇರೆವರನ್ನು ನೋಡಿ."
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "The usual 500 for small jobs is irrelevant after explicit refusal. Per extraction policy, clear declined cases have null quote and visit fields.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-10",
+      "transcriptSha256": "99cfdeea4f182d158990f02e95c2379f5c93300c8b2d30971749896ed44f7118",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 200,
+        "fee_covers": "Inspection only if no work is done; no separate visit charge when the work is carried out.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "One total job price, not yet quoted. The customer budget of 800 is not a provider quote.",
+        "visit_date": "2026-11-26",
+        "visit_time": null,
+        "availability_as_said": "Tomorrow, yes. I have another job first, so after lunch sometime.",
+        "summary": "Will come tomorrow after lunch and call before leaving; 2 PM is not promised. Inspection-only costs 200, while completed work has no separate coming charge.",
+        "evidence": [
+          "If we do the job, no separate coming charge. If you just want us to look and leave, two hundred.",
+          "Don't promise two. I'll call before I start from here."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "Clear inspection-only fee and date, but no exact time. Keep the visit waiver condition.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-11",
+      "transcriptSha256": "dfe9b63ce89627230dd71244f1efc0171c31b5ce72c70411bfad604db0ae1592",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "tomorrow after lunch",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 200,
+          "currency": "INR",
+          "qualifications": "Inspection only if no work is done; no separate visit charge when the work is carried out."
+        },
+        "rationale": "Tomorrow after lunch is a useful arrival period, and the inspection-only 200 and work waiver are clear."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 350,
+        "fee_covers": "Inspection and simple terminal tightening. Parts and larger repairs are separate.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "A breaker replacement will be quoted after testing; no repair amount is agreed.",
+        "visit_date": "2026-11-26",
+        "visit_time": "15:30",
+        "availability_as_said": "Hold on, my assistant says he already booked that slot. Make it three thirty, afternoon.",
+        "summary": "Confirms tomorrow at 3:30 PM, replacing the earlier 1:30 slot. Inspection and simple tightening cost 350; larger repairs and parts are separate.",
+        "evidence": [
+          "No. Three hundred and fifty rupees. Not three thousand.",
+          "Yes, three thirty. Three hundred and fifty for checking. If it's just tightening a terminal, that's included."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "Use the corrected 350 amount and latest confirmed 15:30 slot.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-12",
+      "transcriptSha256": "c97149c62b433d0ff47f36a46dd59a33f6e56cebceb0103a39770a109f951e64",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "15:30",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 350,
+          "currency": "INR",
+          "qualifications": "Inspection and simple terminal tightening. Parts and larger repairs are separate."
+        },
+        "rationale": "Clear visit day, exact time and applicable inspection fee support basic user review."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": 400,
+        "fee_covers": "Inspection; credited against the labour bill if work is done.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "The 1000 labour and 600 balance figures are arithmetic examples, explicitly not quotes.",
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "Tomorrow late morning, probably. I need the building location.",
+        "summary": "Inspection is 400, credited toward labour. Tomorrow late morning is tentative, and the call drops before the proposed 300 discount or 11 AM time is accepted.",
+        "evidence": [
+          "Four hundred just to check. If I do the work, that comes off the labour bill.",
+          "That's an example. I haven't seen it.",
+          "Wait, the signal here— [call disconnected]"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "An unfinished possible discount does not withdraw the clear 400 rate. Neither date nor exact time is committed. Do not extract illustrative repair arithmetic.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-13",
+      "transcriptSha256": "4e641da8c969c2936720bccd8ae3cfb55bd66a2ff58fc464f5402b2448967d3d",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 400,
+          "currency": "INR",
+          "qualifications": "Inspection; credited against the labour bill if work is done."
+        },
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 250,
+        "fee_covers": "Inspection and small connection work, excluding replacement parts or separate winding work.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "A new regulator is extra; winding repair is a separate job with no quoted price.",
+        "visit_date": "2026-11-27",
+        "visit_time": null,
+        "availability_as_said": "Yes, Friday between four and six. Send the location.",
+        "summary": "Confirms Friday November 27 between 4 and 6 PM, not 4 PM sharp. Inspection and minor connection work cost 250; parts and winding repair are separate.",
+        "evidence": [
+          "No, I meant Friday. I've lost track of the day. Friday the twenty-seventh.",
+          "Four to six, not four sharp. Two fifty is the inspection and small connection work, not everything."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "The explicit corrected date overrides tomorrow. A confirmed window still does not supply an exact time.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-14",
+      "transcriptSha256": "a5877fe9054f7952fb4ac7ba67945d9918efb99b29d27bc823c2fe6cf512545e",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "Friday November 27, between 4 and 6 PM",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 250,
+          "currency": "INR",
+          "qualifications": "Inspection and small connection work, excluding replacement parts or separate winding work."
+        },
+        "rationale": "The provider commits to a clear day and 4–6 PM window with a 250 inspection fee."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": null,
+        "fee_covers": null,
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": null,
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "I might. I'm meant to be out of town, but that may get cancelled.",
+        "summary": "No availability or job-specific fee is confirmed. The usual 300 rate is not quoted for this farther location; after 7 PM is a callback time, not an arrival.",
+        "evidence": [
+          "No, neither of those is confirmed. I'll know tonight whether I'm even here.",
+          "Yes, call after seven. That's when to call me, not when I'm coming to the house."
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "Do not substitute a historical rate or callback time for actual booking terms.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-15",
+      "transcriptSha256": "29cf558e63e2951f6f8db09643e2700757cf540d3614a439130f4530b339eca9",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 200,
+        "fee_covers": "200 for inspection only if no work is done; no separate visit fee if the job is carried out.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Materials and labour will be quoted separately after inspection; no amounts are agreed.",
+        "visit_date": "2026-11-26",
+        "visit_time": null,
+        "availability_as_said": "നാളെ വരാം. ഉച്ച കഴിഞ്ഞ്, ഇവിടത്തെ പണി തീർന്നിട്ട്.",
+        "summary": "Will come tomorrow after finishing another job, with no exact time promised. Inspection-only costs 200; no separate visit fee applies if work is done.",
+        "evidence": [
+          "പണി ചെയ്യിക്കുന്നുണ്ടെങ്കിൽ വേറെ ഇല്ല എന്നാണ് പറഞ്ഞത്. നോക്കി മാത്രം വിടുകയാണെങ്കിൽ ഇരുന്നൂറ് വേണം.",
+          "സമയം ഉറപ്പിക്കണ്ട. ഇറങ്ങുമ്പോൾ വിളിക്കാം, വീട്ടിൽ ആളുണ്ടോ എന്ന് ചോദിച്ചിട്ട് വരാം."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "Do not misread conditional no separate fee as an unconditional free inspection or accept the agent-proposed 14:00.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-16",
+      "transcriptSha256": "034dcce09224111d9027e8fd1a6eb2bd290dccde03922f4628a483de4c742985",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "tomorrow after lunch",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 200,
+          "currency": "INR",
+          "qualifications": "200 for inspection only if no work is done; no separate visit fee if the job is carried out."
+        },
+        "rationale": "Tomorrow after lunch is accepted, with a clear inspection-only fee of 200 and no separate visit fee if work is done."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": 350,
+        "fee_covers": "Inspection and a small loose-connection fix; materials and larger labour are separate.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Replacement materials and labour are extra; no separate repair amount is quoted.",
+        "visit_date": "2026-11-26",
+        "visit_time": "12:30",
+        "availability_as_said": "അല്ല, നാളെ ഉച്ചയ്ക്ക് പന്ത്രണ്ടര. പകൽ.",
+        "summary": "Confirms tomorrow at 12:30 PM, replacing 10 AM. Inspection and a minor loose-connection fix cost 350; materials and additional labour are separate.",
+        "evidence": [
+          "മുന്നൂറ്റമ്പത്, മൂന്ന് അഞ്ച് പൂജ്യം. ചെറിയ ലൂസ് കണക്ഷൻ ആണെങ്കിൽ അതിൽ ശരിയാക്കാം.",
+          "അല്ല, നാളെ ഉച്ചയ്ക്ക് പന്ത്രണ്ടര. പകൽ.",
+          "അതെ, ഉറപ്പാണ്. മുന്നൂറ്റമ്പത് തന്നെ. വിലാസം അയച്ചാൽ മതി."
+        ],
+        "enough_info": "yes"
+      },
+      "rationale": "The provider corrects 300 to 350 and clarifies daytime 12:30, then confirms both.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-17",
+      "transcriptSha256": "ad178e210e6108831e2e372a11837be1f8e0d1077803d0522600f0a162c0340d",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "12:30",
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 350,
+          "currency": "INR",
+          "qualifications": "Inspection and a small loose-connection fix; materials and larger labour are separate."
+        },
+        "rationale": "Clear visit day, exact time and applicable inspection fee support basic user review."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": null,
+        "fee_covers": "Inspection-only rate is unresolved after the earlier 250 is explicitly withdrawn for the actual location.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "600–800 is a conditional total for a small blockage, including the visit, not a separate repair charge. A larger line costs differently.",
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "രാവിലെ വേറെ പണിയുണ്ട്. ഉച്ചയ്ക്ക് ശേഷം നോക്കാം, ഉറപ്പ് പറയുന്നില്ല.",
+        "summary": "Tentative availability after lunch only. Withdraws the 250 inspection rate for the actual location and disconnects before stating a new rate or accepting 3 PM.",
+        "evidence": [
+          "അല്ല, അതിൽ വരുന്നതും ഉണ്ട്. പക്ഷേ സ്റ്റേഷന്റെ പുറകിൽ ഏത് ഭാഗം?",
+          "അവിടേക്കാണെങ്കിൽ വരാനുള്ളത് ഇരുന്നൂറ്റമ്പത് അല്ല, അത്— [interrupted]"
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "No committed date or time. Combined-job 600–800 must not be stored as separate repair fees, and the withdrawn 250 must not survive.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-18",
+      "transcriptSha256": "f4fe1436ddd01afec96c148827c1d807c2c6de5ab7e00a2e2a41a3d0053b39c9",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient. No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "offer_received",
+        "visit_fee": null,
+        "fee_covers": "Inspection. The applicable rate depends on unverified membership: 300 for members, otherwise 500.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Repair is separate; no repair amount is quoted.",
+        "visit_date": "2026-11-26",
+        "visit_time": "17:30",
+        "availability_as_said": "നാളെ വൈകിട്ട് അഞ്ചരയ്ക്ക് വരാം. ഏത് ഏരിയയാണ്?",
+        "summary": "Confirms tomorrow at 5:30 PM. Inspection is 300 with membership or 500 without it; membership is not yet checked, so the applicable fee remains unresolved.",
+        "evidence": [
+          "ഉണ്ടെങ്കിൽ മുന്നൂറ്, ഇല്ലെങ്കിൽ അഞ്ഞൂറ്. നമ്പർ അയച്ചാൽ പരിശോധിക്കാം.",
+          "സമയം ഉറപ്പാണ്. ചാർജ് ഏതാണ് എന്ന് മെമ്പർഷിപ്പ് നോക്കിയിട്ട് പറയാം."
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "Do not choose one conditional rate or interpret the agent request as an accepted discount. The current scalar visit_fee cannot express both branches.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-19",
+      "transcriptSha256": "fee49871ba286b5dd493ed0038c0103157fc87ca919c720ddaae1a88bf58144a",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": true,
+        "arrival_period_known": true,
+        "arrival_period": "17:30",
+        "usable_cost_known": false,
+        "cost": null,
+        "rationale": "No clear applicable fee or usable total-job quote."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    },
+    {
+      "expected": {
+        "provider_response": "needs_clarification",
+        "visit_fee": 300,
+        "fee_covers": "Inspection only; motor removal is extra and internal motor work may require another provider.",
+        "repair_fee_min": null,
+        "repair_fee_max": null,
+        "repair_cost_notes": "Motor removal labour will be quoted separately. Internal motor repair is outside this provider service.",
+        "visit_date": null,
+        "visit_time": null,
+        "availability_as_said": "ഇപ്പോൾ സമയം പറയാൻ പറ്റില്ല. തീയതിയും ഉറപ്പിക്കണ്ട, വീട്ടിൽ ചോദിച്ചിട്ട് തിരിച്ചുവിളിക്കാം.",
+        "summary": "Inspection costs 300, but the previously proposed November 27 at 9 AM is withdrawn. Both date and time must be reconfirmed.",
+        "evidence": [
+          "മുന്നൂറ്. മോട്ടോർ അഴിച്ചെടുക്കണമെങ്കിൽ അതിന്റെ കൂലി വേറെ പറയാം.",
+          "ഇപ്പോൾ സമയം പറയാൻ പറ്റില്ല. തീയതിയും ഉറപ്പിക്കണ്ട, വീട്ടിൽ ചോദിച്ചിട്ട് തിരിച്ചുവിളിക്കാം."
+        ],
+        "enough_info": "no"
+      },
+      "rationale": "Availability is explicitly withdrawn, but the clearly quoted inspection fee is not withdrawn.",
+      "needs_adjudication": false,
+      "review_status": "assistant_labeled_awaiting_human_review",
+      "id": "synthetic-20",
+      "transcriptSha256": "369086e7491a6f4bf1baa827e68531cf1bbde811d544a0be3d48940d0b05a049",
+      "enough_info_policy_version": 3,
+      "enough_info_basis": {
+        "visit_day_known": false,
+        "arrival_period_known": false,
+        "arrival_period": null,
+        "usable_cost_known": true,
+        "cost": {
+          "kind": "visit_or_inspection",
+          "amount": 300,
+          "currency": "INR",
+          "qualifications": "Inspection only; motor removal is extra and internal motor work may require another provider."
+        },
+        "rationale": "No clear current visit offer. Visit day is unresolved, withdrawn, tentative or contradictory. No supported useful arrival period; an unclear AM/PM, a callback time, or a tentative proposal is insufficient."
+      },
+      "audit_review": {
+        "date": "2026-11-26",
+        "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+        "status": "self_reviewed_pending_independent_review",
+        "exclude_from_strict_scoring": [],
+        "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+        "language_note": null
+      }
+    }
+  ]
+}

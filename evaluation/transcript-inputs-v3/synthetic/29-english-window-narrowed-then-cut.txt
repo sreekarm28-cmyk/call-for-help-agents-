@@ -1,0 +1,12 @@
+Agent: Hello, Northside Electrical? A customer has two lights flickering in the hallway.
+You: Yes, I can check. Not tonight though.
+Agent: Tomorrow afternoon, perhaps between two and four?
+You: Tomorrow between two and four is okay. Checking charge is three hundred, repairs separate.
+Agent: The customer needs an exact time. Could you do three?
+You: Not three. I could probably make it three forty-five, but let me check my other booking.
+Agent: So three forty-five tomorrow is confirmed?
+You: No, the two-to-four window is what I can promise. The exact time needs checking.
+Agent: Understood. Three hundred to inspect, repair extra. Would you call before leaving?
+You: Yes. Hang on, the other customer just replied. I can make it exactly— [interrupted]
+Agent: Exactly three forty-five?
+You: Wait, don't write that yet. It says— [call disconnected]

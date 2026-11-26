@@ -1,0 +1,14 @@
+Agent: Hello, have I reached Riverside Plumbing?
+You: The shop, yes. Are you calling about a delivery?
+Agent: No, a customer has a leaking tap. Do you send someone to homes in this area?
+You: Yes. Send the location and a photo if you have one.
+Agent: What is the visiting fee? The customer can spend up to eight hundred.
+You: We don't split it like that. We do the work and give one amount.
+Agent: So there is no charge just to visit?
+You: If we do the job, no separate coming charge. If you just want us to look and leave, two hundred.
+Agent: Is eight hundred the total, including a replacement tap?
+You: That's your budget, not my quote. A tap can cost more than that by itself.
+Agent: Can you come tomorrow at two in the afternoon?
+You: Tomorrow, yes. I have another job first, so after lunch sometime.
+Agent: Shall I put two p.m.?
+You: Don't promise two. I'll call before I start from here.

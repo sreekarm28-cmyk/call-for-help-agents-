@@ -1,0 +1,12 @@
+Agent: Hello, is this Canal Road Plumbing? I'm calling for a customer with a leaking kitchen tap.
+You: Yes, what kind of tap? The normal wall one or a mixer?
+Agent: They think it's a normal one. Can you come and check before quoting?
+You: Yes. Checking is free in that building. We maintain the common pipes there.
+Agent: Free if they get the repair done, or even if they say no?
+You: Even if they don't do it. No visit or inspection charge for that building.
+Agent: The customer has a six-hundred budget. Would that cover the repair?
+You: I haven't quoted six hundred. I'll see the tap and tell them. A replacement is a different cost.
+Agent: Can you come tomorrow at ten in the morning?
+You: Ten is fine, tomorrow morning.
+Agent: So no inspection charge, and the repair price comes after you see it?
+You: Exactly. They can say no to the repair. No checking charge either way.

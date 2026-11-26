@@ -1,0 +1,12 @@
+Agent: Hi, am I speaking to East End Electrical? A customer has a loose socket and one dead switch.
+You: Yes, send photos. I can come tomorrow.
+Agent: What's the inspection charge, and any idea of labour separately?
+You: Two hundred to check. Labour could be six to eight hundred, plus any parts.
+Agent: Six hundred altogether, including inspection?
+You: No, the two hundred is separate. But wait, I just opened your photos.
+Agent: Is the socket damaged?
+You: It's one modular plate. Labour for both jobs will be five hundred flat, not six to eight. Parts and the two-hundred inspection are extra.
+Agent: Can I save five hundred as the labour price, not a range?
+You: Yes, for what's in those photos. If there's hidden wiring damage, I'll stop and ask before charging for that.
+Agent: Tomorrow at two thirty in the afternoon?
+You: Yes, tomorrow two thirty. Two hundred inspection, five hundred labour for those jobs, parts extra.

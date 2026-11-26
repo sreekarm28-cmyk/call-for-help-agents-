@@ -1,0 +1,35 @@
+TRANSCRIPT INPUTS V2 - LABELED FOR REVIEW
+
+20 synthetic conversations: 5 Hindi, 5 Kannada, 5 English and 5 Malayalam.
+All prices are in INR. Reference call time for every synthetic case: 25 November 2026, 10:00 AM Asia/Kolkata. Use manifest.json for these metadata; transcript files contain only ordered speaker turns.
+
+You: person answering the service phone. Agent: booking assistant.
+These are invented examples, not recordings, verified translations or new real customer calls. A fluent speaker should review Hindi, Kannada and Malayalam wording before treating labels as a benchmark.
+
+Scenarios include combined charges, conditional inspection charges, changed quotes, labour-versus-parts costs, uncertain dates, withdrawn availability, wrong-person answers, service refusals and four disconnected calls. Some conversations resolve clearly after corrections; others remain genuinely unanswerable. Do not force exact values from every example.
+
+Assistant-authored expected answers are stored separately in expected-labels.json. Labels await human approval. No model-generated test results or scores are included. Agent suggestions are not automatically provider confirmations. A missing answer or cut-off word is not an agreement. Preserve unresolved ambiguity in later labels.
+
+The 10 real database transcripts remain separately in output/evaluation/real-transcripts/ (Git ignored). They retain their own real call timestamps, not this synthetic reference date. Existing older evaluation data and results were not changed.
+
+Keep future answer labels separate from the model input. For date interpretation use the supplied reference time, without inventing a date when the conversation contradicts itself. Transcript-only evaluation cannot establish what was really spoken in the real call audio.
+
+LABEL FILES AND TEST INPUTS
+Synthetic answer key: evaluation/transcript-inputs-v2/expected-labels.json
+Private real-call answer key: output/evaluation/real-transcripts/expected-labels.json
+Combined private model inputs: output/evaluation/labeled-transcripts-v2/inputs.jsonl
+Combined private answer key: output/evaluation/labeled-transcripts-v2/expected-labels.jsonl
+Review table: output/evaluation/labeled-transcripts-v2/label-review.tsv
+
+enough_info policy version 3: yes means a supported visit offer with a clear day, useful arrival period (including morning, evening or a window), and a clear applicable visit fee or total-job quote. Exact clock time and a separate visit fee are not required. Free inspection qualifies when explicit. Unresolved fee eligibility, tentative or contradictory scheduling, and agent-only guesses do not qualify. A clear total-job estimate can qualify if its scope and estimated nature remain explicit. See evaluation/enough-info-policy.json. This is information for user review, not booking confirmation.
+
+The field currently exists only in evaluation labels. The production extraction schema, database and UI have not been changed. A future test must either derive it from extracted facts using this policy or explicitly request it in an evaluation-only model schema. Never pass the answer key or rationale to the tested model.
+
+Exact-match targets: provider_response, visit_fee, repair_fee_min, repair_fee_max, visit_date, visit_time, enough_info. Assess free-text fields semantically, preserving caveats rather than enforcing exact wording. Materially ambiguous real-call labels are marked needs_adjudication and should be resolved before strict scoring.
+
+Policy v3 labels include enough_info_basis outside expected, explaining timing and cost. visit_time stays null for broad periods. Combined costs never overwrite visit_fee or repair-only bounds. All 48 labeled cases are also available privately under output/evaluation/labeled-transcripts-all/. The previous 12 synthetic cases remain unlabeled.
+
+SYNTHETIC DATA AUDIT (November 26, 2026)
+All 50 synthetic transcripts and the 38 existing synthetic label sets were self-reviewed. Turn-aligned English translations and per-case findings: evaluation/transcript-audit/english-review.html. Machine-readable findings: evaluation/transcript-audit/audit-report.json.
+
+Three reference-label cases require adjudication: synthetic-04 (visit_fee), synthetic-07 (repair bounds), synthetic-46 (outcome, day and enough_info). These fields are listed in audit_review.exclude_from_strict_scoring; do not treat them as authoritative expected values until reviewed. Original text and expected field values were preserved. Language-naturalness concerns are also recorded. This is a same-assistant audit and translation, not independent fluent-human validation.

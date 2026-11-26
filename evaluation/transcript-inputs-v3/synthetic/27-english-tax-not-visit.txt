@@ -1,0 +1,12 @@
+Agent: Hello, is this Cedar Electrical? A customer needs a bathroom exhaust fan checked.
+You: Yes. Is it completely stopped or just noisy?
+Agent: Noisy, but still running. What would you charge to inspect it?
+You: Five hundred before tax. If they need a tax invoice, GST is eighteen percent on top.
+Agent: Is the eighteen percent a separate visiting charge?
+You: No, that's tax. The inspection is five hundred before tax either way.
+Agent: The customer wants an invoice. Is five hundred and ninety the full inspection amount then?
+You: Yes, five ninety with GST. Repairs and parts aren't in that amount.
+Agent: Can you come tomorrow at four fifteen in the afternoon?
+You: Yes, tomorrow at four fifteen works.
+Agent: Inspection five ninety including tax, repair quoted separately, tomorrow four fifteen?
+You: Correct. Send the location and tell them to leave the fan off until I check it.

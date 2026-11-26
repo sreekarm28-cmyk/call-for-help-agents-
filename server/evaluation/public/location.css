@@ -1,0 +1,7 @@
+.eval-navigation { display:flex; gap:6px; border-bottom:1px solid var(--line); }
+.eval-navigation a { padding:10px 20px; text-decoration:none; border-bottom:3px solid transparent; color:var(--muted); }
+.eval-navigation a[aria-current=page] { color:var(--brand); border-bottom-color:var(--brand); font-weight:600; }
+#location-scores { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+#location-results td:first-child { min-width:220px; max-width:350px; white-space:normal; overflow-wrap:anywhere; }
+#location-json { min-height:210px; font:12px/1.5 ui-monospace,monospace; }
+#location-results td { vertical-align:top; }

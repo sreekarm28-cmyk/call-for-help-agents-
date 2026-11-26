@@ -1,0 +1,268 @@
+[
+  {
+    "id": "synthetic-01",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, क्या यह उजाला प्लंबिंग है? मैं Helpfully से ग्राहक की तरफ से बोल रहा हूँ।\nYou: हाँ, बताइए। दुकान अभी बंद है, फोन पर बता दीजिए।\nAgent: रसोई का नल बंद करने के बाद भी टपक रहा है। आप यह काम करते हैं?\nYou: करते हैं। लेकिन पूरा नल बदलना पड़ेगा या वॉशर, देखकर ही पता चलेगा।\nAgent: आने की फीस कितनी होगी? ग्राहक ने हजार तक बताया है।\nYou: आने की अलग फीस नहीं है। काम करके जो होगा, एक ही बिल होगा।\nAgent: मतलब पाँच सौ विजिट और बाकी मरम्मत का?\nYou: नहीं, पाँच सौ मैंने नहीं बोला। पहले देखकर बताऊँगा, पूरा काम मिलाकर।\nAgent: अगर ग्राहक काम नहीं करवाते तो भी आने का कुछ लगेगा?\nYou: इतनी दूर से बुलाकर काम नहीं करवाओगे तो आने-जाने का देना पड़ेगा। कितना, पता भेजो पहले।\nAgent: ठीक है। कल दोपहर एक बजे आ सकते हैं?\nYou: कल आ जाऊँगा। पहले जो साइट है वह खत्म करूँगा, फिर निकलूँगा।\nAgent: तो एक बजे पक्का लिख दूँ?\nYou: समय मत लिखो अभी। निकलते समय फोन कर दूँगा।\n"
+  },
+  {
+    "id": "synthetic-02",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: हेलो, सिटी इलेक्ट्रिकल वाले बोल रहे हैं?\nYou: हाँ, मालिक बाहर है। मैं ही काम देखने आता हूँ, बोलिए।\nAgent: ग्राहक के घर का एक सॉकेट गर्म हो रहा है। बिजली अभी बंद रखी है।\nYou: ठीक है, उसे चलाना मत। कल सुबह देख लूँगा।\nAgent: सिर्फ देखने की फीस और काम की फीस अलग बताइए।\nYou: आने का ढाई सौ। तार या सॉकेट लगा तो उसके ऊपर।\nAgent: ढाई हजार आने के और सामान अलग?\nYou: अरे नहीं, दो सौ पचास। हजार नहीं। बस देखने का इतना है।\nAgent: मरम्मत भी उसी में होगी?\nYou: सिर्फ कसने से ठीक हुआ तो उसी में। बदलना पड़ा तो मजदूरी अलग बताऊँगा। सामान भी अलग।\nAgent: कल सुबह नौ बजे?\nYou: नौ नहीं। पहले स्कूल छोड़कर आता हूँ। साढ़े दस कर लो, सुबह।\nAgent: कल सुबह दस तीस, देखने के दो सौ पचास। ज्यादा काम हुआ तो पहले कीमत बताएँगे?\nYou: हाँ, यही लिखो। बिना बताए काम नहीं करूँगा।\n"
+  },
+  {
+    "id": "synthetic-03",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, भरोसा प्लंबर सर्विस?\nYou: हाँ, आवाज थोड़ी कम है।\nAgent: बाथरूम का पानी निकल नहीं रहा। ग्राहक को कल किसी की जरूरत है।\nYou: कितनी मंजिल? बाहर की लाइन है या अंदर?\nAgent: दूसरी मंजिल है। अंदर वाली जाली से पानी वापस आ रहा है।\nYou: मशीन लग सकती है। बिना देखे मत बोलना कि साधारण जाम है।\nAgent: समझ गया। आने का कितना और मशीन का कितना होगा?\nYou: हमारा जो नॉर्मल है, वह आठ सौ है, लेकिन वह इस काम के लिए नहीं—\nAgent: आठ सौ विजिट फीस?\nYou: नहीं सुनो, वह छोटी सफाई का पूरा है। तुम्हारे में मशीन लगी तो अलग होगा।\nAgent: तो सिर्फ आने का कितना लिखूँ?\nYou: आने का अगर काम नहीं हुआ तो दो— [interrupted]\nAgent: दो सौ? और कल कितने बजे?\nYou: हेलो, नेटवर्क जा रहा है। मैं अभी— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-04",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: हेलो, नई रोशनी इलेक्ट्रिकल? इन्वर्टर बार-बार बंद हो रहा है।\nYou: हाँ, मैं देखता हूँ। मॉडल कौन सा है?\nAgent: मॉडल अभी नहीं मिला। आज शाम आना संभव है?\nYou: आज नहीं। कल रात बारह के बाद ही फ्री हूँ।\nAgent: कल की तारीख छब्बीस नवंबर है। छब्बीस को रात बारह?\nYou: मतलब छब्बीस का काम खत्म करके, सत्ताईस लग जाएगी। उस समय।\nAgent: तो सत्ताईस नवंबर रात बारह बजे बिल्कुल?\nYou: बारह के बाद बोला है, बारह पक्का नहीं। रात में ग्राहक को ठीक हो तो।\nAgent: आने की फीस?\nYou: रात का सात सौ, सिर्फ देखने का। दिन में चार सौ होता है।\nAgent: ठीक है, सात सौ और फिर मरम्मत अलग।\nYou: रुको, रात में मत रखो। घर में बच्चे होंगे। दिन में कोशिश करूँगा।\nAgent: फिर चार सौ और छब्बीस दोपहर?\nYou: फीस दिन की चार सौ है, लेकिन कौन से दिन आऊँगा अभी नहीं बता सकता। पहले ग्राहक से पूछो।\n"
+  },
+  {
+    "id": "synthetic-05",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, क्या जनसेवा प्लंबिंग से बात हो रही है?\nYou: यही दुकान का नंबर है, लेकिन मैं पास वाली दुकान से बोल रहा हूँ। उनका फोन मेरे पास है।\nAgent: अच्छा, ग्राहक की पाइप से पानी टपक रहा है। प्लंबर कब मिलेंगे?\nYou: उनका लड़का शाम को आएगा, शायद वही करता है।\nAgent: आपको उनकी विजिट फीस पता है?\nYou: पिछली बार मेरे घर तीन सौ लिए थे। मेरे घर सामने ही है।\nAgent: तो इस ग्राहक के लिए भी तीन सौ मान लें?\nYou: नहीं भाई, मेरी बात अलग थी। वह खुद बताएगा।\nAgent: कल सुबह दस बजे आ पाएँगे?\nYou: हाँ, दुकान दस बजे खुलती है।\nAgent: ठीक, कल दस बजे ग्राहक के घर आने के लिए हाँ कह रहे हैं?\nYou: अरे दुकान खुलती है बोला। मैं प्लंबर नहीं हूँ। तुम फिर फोन करना।\nAgent: कब वापस कॉल करूँ?\nYou: शाम को देख लेना, अभी मैं अपनी दुकान खोल रहा हूँ।\n"
+  },
+  {
+    "id": "synthetic-06",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ನಮಸ್ಕಾರ, ಇದು ಕಾವೇರಿ ಪ್ಲಂಬಿಂಗ್ ಅಂಗಡಿಯಾ? ನಾನು Helpfully ಇಂದ ಕಸ್ಟಮರ್ ಪರವಾಗಿ ಮಾತಾಡುತ್ತಿದ್ದೇನೆ.\nYou: ಹೌದು, ಹೇಳಿ. ಕೆಲಸ ಏನಾಗಿದೆ?\nAgent: ಅಡುಗೆಮನೆ ಟ್ಯಾಪ್ ಲೀಕ್ ಆಗುತ್ತಿದೆ. ನಿಮ್ಮವರು ಬಂದು ನೋಡಬಹುದಾ?\nYou: ನೋಡಬಹುದು. ಯಾವ ಏರಿಯಾ ಅಂತ ಮೊದಲು ಹೇಳಿ.\nAgent: ಜಯನಗರ ನಾಲ್ಕನೇ ಬ್ಲಾಕ್. ಬರೋದಕ್ಕೆ ಎಷ್ಟು ಫೀಸು?\nYou: ಬರೋದಕ್ಕೆ ಅಂತ ಬೇರೆ ಏನಿಲ್ಲ. ಕೆಲಸ ನೋಡಿ ಒಟ್ಟಿಗೆ ಹೇಳ್ತೀವಿ.\nAgent: ಹಾಗಾದರೆ ವಿಸಿಟ್ ಫೀ ಜೀರೋ ಅಂತ ಬರೆಯಲಾ?\nYou: ಕೆಲಸ ಮಾಡಿಸಿದರೆ ಬೇರೆ ವಿಸಿಟ್ ಚಾರ್ಜ್ ಇಲ್ಲ. ಬರೀ ನೋಡಿ ವಾಪಸ್ ಕಳಿಸಿದರೆ ನೂರು ಕೊಡಬೇಕು.\nAgent: ರಿಪೇರಿ ಎಷ್ಟು ಆಗಬಹುದು?\nYou: ವಾಷರ್ ಮಾತ್ರ ಆದರೆ ಮುನ್ನೂರು ಒಳಗೆ ಆಗಬಹುದು. ಟ್ಯಾಪ್ ಬದಲಿಸಬೇಕಾದರೆ ಅದು ಬೇರೆ.\nAgent: ನಾಳೆ ಸಂಜೆ ಐದು ಗಂಟೆಗೆ ಬರ್ತೀರಾ?\nYou: ನಾಳೆ ಸಂಜೆ ಬರ್ತೀನಿ, ಐದು ಇಲ್ಲ ಆರು ಆಗಬಹುದು. ಟ್ರಾಫಿಕ್ ಹೇಗಿರುತ್ತೋ.\nAgent: ಐದು ಗಂಟೆ ಕನ್ಫರ್ಮ್ ಮಾಡೋಣವಾ?\nYou: ಬೇಡ, ಹೊರಡುವ ಮೊದಲು ಫೋನ್ ಮಾಡ್ತೀನಿ. ಕಸ್ಟಮರ್ ಇದ್ದಾರಾ ಅಂತ ಕೇಳಿ ಬರ್ತೀನಿ.\n"
+  },
+  {
+    "id": "synthetic-07",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ಹಲೋ, ಶಕ್ತಿ ಎಲೆಕ್ಟ್ರಿಕಲ್ಸ್ ಅವರಾ?\nYou: ಹೌದು. ಅಂಗಡಿಗೆ ಬೇಕಾ ಅಥವಾ ಮನೆಗೆ ಕೆಲಸ ಇದೆಯಾ?\nAgent: ಮನೆಗೆ. ಎರಡು ಫ್ಯಾನ್ ನಿಧಾನವಾಗಿ ತಿರುಗುತ್ತಿವೆ. ಕಸ್ಟಮರ್ ಬಜೆಟ್ ಸಾವಿರ ಇದೆ.\nYou: ಎರಡಕ್ಕೂ ಸೇರಿ ಆರುನೂರು ಲೇಬರ್ ಆಗಬಹುದು. ಕ್ಯಾಪಾಸಿಟರ್ ಬೇಕಾದರೆ ಅದರ ಹಣ ಬೇರೆ.\nAgent: ಆರುನೂರು ಬರೋದಕ್ಕೆ ಮಾತ್ರನಾ?\nYou: ಅಲ್ಲ, ಎರಡೂ ಫ್ಯಾನ್ ಕೆಲಸಕ್ಕೆ ಹೇಳಿದ್ದು. ಬರೋದು ಅದರಲ್ಲಿ ಸೇರಿದೆ.\nAgent: ಬರೀ ಚೆಕ್ ಮಾಡಿ ಕೆಲಸ ಮಾಡಿಸದಿದ್ದರೆ?\nYou: ಆಗ ಇನ್ನೂರು. ಕೆಲಸ ಮಾಡಿದರೆ ಆ ಇನ್ನೂರು ಮತ್ತೆ ಸೇರಿಸಲ್ಲ.\nAgent: ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಹನ್ನೊಂದು ಗಂಟೆ ಓಕೆನಾ?\nYou: ಹನ್ನೊಂದು ಬೇಡ, ಹನ್ನೊಂದೂವರೆ ಮಾಡೋಣ. ಬೆಳಿಗ್ಗೆ.\nAgent: ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಹನ್ನೊಂದೂವರೆ, ಎರಡರ ಕೆಲಸ ಆರುನೂರು ಪಕ್ಕಾನಾ?\nYou: ಟೈಮ್ ಪಕ್ಕಾ. ಹಣ ಈಗಲೇ ಫಿಕ್ಸ್ ಮಾಡಬೇಡಿ, ಮೋಟರ್ ಸುಟ್ಟಿದ್ದರೆ ಆ ಕೆಲಸಕ್ಕೆ ಆಗಲ್ಲ.\nAgent: ಹಾಗಾದರೆ ಆರುನೂರು ಅಂದಾಜು, ಕ್ಯಾಪಾಸಿಟರ್ ಬೇರೆ?\nYou: ಹೌದು, ನೋಡಿ ಹೇಳ್ತೀನಿ. ಮೊದಲು ಹೆಚ್ಚಾದರೆ ಕಸ್ಟಮರ್‌ಗೆ ಹೇಳ್ತೀನಿ.\n"
+  },
+  {
+    "id": "synthetic-08",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ನಮಸ್ಕಾರ, ವಿನಾಯಕ ಪ್ಲಂಬಿಂಗ್ ಸರ್ವಿಸ್?\nYou: ಹೌದು, ಸ್ವಲ್ಪ ಜೋರಾಗಿ ಹೇಳಿ. ಬೈಕ್ ನಿಲ್ಲಿಸಿದ್ದೀನಿ.\nAgent: ಬಾತ್‌ರೂಮ್ ಪೈಪ್ ಲೀಕ್ ಇದೆ. ಬರೋದಕ್ಕೆ ಫೀ ಎಷ್ಟು?\nYou: ಸಾಮಾನ್ಯವಾಗಿ ನಾಲ್ಕು ನೂರು. ದೂರ ಇದ್ದರೆ ಐದು ನೂರು.\nAgent: ಇದು ಬನಶಂಕರಿ ಎರಡನೇ ಹಂತ.\nYou: ಅದು ಹತ್ತಿರ ಇದೆ. ನಾಲ್ಕು ನೂರು ಸಾಕು, ಬರೀ ನೋಡೋದಕ್ಕೆ.\nAgent: ಇಂದು ಮಧ್ಯಾಹ್ನ ಮೂರು ಗಂಟೆಗೆ ಬರುವಿರಾ?\nYou: ಇವತ್ತು ಆಗಲ್ಲ, ನಾಳೆ ಮೂರು ಗಂಟೆಗೆ ಬರುತ್ತೀನಿ.\nAgent: ನಾಳೆ ಮಧ್ಯಾಹ್ನ ಮೂರು, ನಾಲ್ಕು ನೂರು ವಿಸಿಟ್ ಅಂತ ನೋಟ್ ಮಾಡ್ತೀನಿ.\nYou: ಒಂದು ನಿಮಿಷ, ಆ ಏರಿಯಾ ಅಂದರೆ ನಾನು ಬೇರೆ ಅಂದುಕೊಂಡೆ. ನಿಮ್ಮ ಪಿನ್ ಕೋಡ್ ಏನು?\nAgent: ಐದು ಆರು ಶೂನ್ಯ ಶೂನ್ಯ ಏಳು ಶೂನ್ಯ.\nYou: ಓ ಆ ಕಡೆನಾ, ಆಗ ನಾಲ್ಕು ನೂರು ಅಲ್ಲ, ಫೀ— [interrupted]\nAgent: ಐದು ನೂರು ಆಗುತ್ತಾ?\nYou: ಹಲೋ, ನನ್ನ ಮಾತು ಕೇಳಿಸ್ತಿದೆಯಾ? ಆ ಫೀ— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-09",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ಹಲೋ, ಮನೆ ಲೈಟ್ ಮಿನುಗುತ್ತಿದೆ. ಸುರಕ್ಷಾ ಎಲೆಕ್ಟ್ರಿಕಲ್ಸ್ ಅವರ ಜೊತೆ ಮಾತಾಡುತ್ತಿದ್ದೀನಾ?\nYou: ಹೌದು, ಮೇನ್ ಸ್ವಿಚ್ ಆಫ್ ಮಾಡೋಕೆ ಹೇಳಿ. ಯಾವಾಗ ಬರಬೇಕು?\nAgent: ಕಸ್ಟಮರ್‌ಗೆ ನಾಳೆ, ಇಪ್ಪತ್ತಾರು ನವೆಂಬರ್, ಸಂಜೆ ಬೇಕು.\nYou: ನಾಳೆ ಆಗಲ್ಲ. ನಾಡಿದ್ದು ಸಂಜೆ ಆರಕ್ಕೆ ಬರುತ್ತೀನಿ.\nAgent: ಇಪ್ಪತ್ತಾರು ಸಂಜೆ ಆರು ಅಂತನಾ?\nYou: ಇಲ್ಲ, ಇಪ್ಪತ್ತೇಳು. ಶುಕ್ರವಾರ ಸಂಜೆ ಆರು.\nAgent: ಸರಿ, ಇಪ್ಪತ್ತೇಳು ನವೆಂಬರ್ ಎರಡು ಸಾವಿರ ಇಪ್ಪತ್ತಾರು, ಸಂಜೆ ಆರು. ವಿಸಿಟ್ ಎಷ್ಟು?\nYou: ಮುನ್ನೂರು ನೋಡುವುದಕ್ಕೆ. ಚಿಕ್ಕ ಕನೆಕ್ಷನ್ ಸರಿಮಾಡಿದರೆ ಅದರಲ್ಲಿ ಆಗುತ್ತದೆ.\nAgent: ಬೇರೆ ರಿಪೇರಿ ಬೇಕಾದರೆ?\nYou: ಮೊದಲು ಹೇಳ್ತೀನಿ. ವೈರ್ ಬದಲಿಸಿದರೆ ಮೆಟೀರಿಯಲ್ ಬೇರೆ, ಲೇಬರ್ ಕೂಡ ಬೇರೆ ಆಗಬಹುದು.\nAgent: ಮುನ್ನೂರು ನೋಡುವುದಕ್ಕೆ, ಶುಕ್ರವಾರ ಸಂಜೆ ಆರು ಖಚಿತವಾ?\nYou: ಹೌದು, ಆರು ಗಂಟೆಗೆ ಬರ್ತೀನಿ. ಈಗ ಕೆಲಸ ಇದೆ, ಫೋನ್ ಇಡ್ತೀನಿ.\n"
+  },
+  {
+    "id": "synthetic-10",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ನಮಸ್ಕಾರ, ಜನತಾ ಪ್ಲಂಬಿಂಗ್ ಮತ್ತು ಹಾರ್ಡ್‌ವೇರ್ ಅಂಗಡಿಯಾ?\nYou: ಹೌದು, ಹೇಳಿ. ಯಾವ ಸಾಮಾನು ಬೇಕು?\nAgent: ಕಸ್ಟಮರ್ ಮನೆಯ ಡ್ರೇನ್ ಬ್ಲಾಕ್ ಆಗಿದೆ. ಬಂದು ಸರಿಮಾಡ್ತೀರಾ?\nYou: ಸಣ್ಣ ಪೈಪ್ ಕೆಲಸ ನಮ್ಮ ಹುಡುಗ ಮಾಡ್ತಾನೆ. ಮೆಷಿನ್ ಹಾಕೋ ಕೆಲಸ ಮಾಡಲ್ಲ.\nAgent: ಅವರಿಗೆ ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಬೇಕು. ಸಾಮಾನ್ಯ ಚಾರ್ಜ್ ಎಷ್ಟು?\nYou: ಸಣ್ಣ ಕೆಲಸಕ್ಕೆ ಐದು ನೂರು ಇರುತ್ತೆ. ಆದರೆ ಯಾವ ಬ್ಲಾಕ್ ಅಂತ ತಿಳಿಯಬೇಕು.\nAgent: ನೆಲದ ಕೆಳಗಿನ ಲೈನ್ ಅಂತ ಹೇಳುತ್ತಿದ್ದಾರೆ. ಹೊರಗಿನ ಮ್ಯಾನ್‌ಹೋಲ್ ಕೂಡ ತುಂಬಿದೆ.\nYou: ಅದು ನಮ್ಮಿಂದ ಆಗಲ್ಲ. ಮೆಷಿನ್ ಇರುವವರನ್ನು ಕರೆಸಿ.\nAgent: ಬರೀ ಬಂದು ನೋಡೋದಾದರೂ ಮಾಡ್ತೀರಾ? ಐದು ನೂರು ಕೊಟ್ಟರೆ?\nYou: ನೋಡಿ ಏನು ಮಾಡೋದು? ಈ ಕೆಲಸ ತೆಗೆದುಕೊಳ್ಳಲ್ಲ, ಅವರಿಗೆ ಬೇರೆ ನಂಬರ್ ಕೊಡ್ತೀನಿ.\nAgent: ಹಾಗಾದರೆ ನಾಳೆ ಬರೋದು ಇಲ್ಲವಾ?\nYou: ಇಲ್ಲ, ನಮ್ಮ ಹುಡುಗನನ್ನೂ ಕಳಿಸಲ್ಲ. ನೀವು ಬೇರೆವರನ್ನು ನೋಡಿ.\n"
+  },
+  {
+    "id": "synthetic-11",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, have I reached Riverside Plumbing?\nYou: The shop, yes. Are you calling about a delivery?\nAgent: No, a customer has a leaking tap. Do you send someone to homes in this area?\nYou: Yes. Send the location and a photo if you have one.\nAgent: What is the visiting fee? The customer can spend up to eight hundred.\nYou: We don't split it like that. We do the work and give one amount.\nAgent: So there is no charge just to visit?\nYou: If we do the job, no separate coming charge. If you just want us to look and leave, two hundred.\nAgent: Is eight hundred the total, including a replacement tap?\nYou: That's your budget, not my quote. A tap can cost more than that by itself.\nAgent: Can you come tomorrow at two in the afternoon?\nYou: Tomorrow, yes. I have another job first, so after lunch sometime.\nAgent: Shall I put two p.m.?\nYou: Don't promise two. I'll call before I start from here.\n"
+  },
+  {
+    "id": "synthetic-12",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hi, is this Oak Electrical Services? I'm calling for a customer with a tripping kitchen circuit.\nYou: Yes, don't let them keep resetting it. Where are they?\nAgent: Near the bus stand. What would you charge to inspect it?\nYou: Three fifty to come and check. Parts and any proper repair are separate.\nAgent: Three thousand five hundred?\nYou: No. Three hundred and fifty rupees. Not three thousand.\nAgent: Can you visit tomorrow morning at ten?\nYou: Ten is booked. I can do one thirty tomorrow afternoon.\nAgent: Tomorrow afternoon, one thirty, inspection three fifty?\nYou: Hold on, my assistant says he already booked that slot. Make it three thirty, afternoon.\nAgent: Three thirty tomorrow, same inspection fee?\nYou: Yes, three thirty. Three hundred and fifty for checking. If it's just tightening a terminal, that's included.\nAgent: And if a breaker needs replacing?\nYou: I'll quote that after testing. Don't put down a repair price yet.\n"
+  },
+  {
+    "id": "synthetic-13",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, Greenline Plumbing? A customer has low water pressure in both bathrooms.\nYou: Both? Could be the tank line. Is the kitchen okay?\nAgent: They haven't checked. Can you inspect it tomorrow?\nYou: Tomorrow late morning, probably. I need the building location.\nAgent: It's close to the market. What's the visiting fee?\nYou: Four hundred just to check. If I do the work, that comes off the labour bill.\nAgent: So four hundred plus the full labour charge?\nYou: No, not plus. Say labour is a thousand, you pay another six hundred, not fourteen hundred.\nAgent: Is a thousand your repair quote for this job?\nYou: That's an example. I haven't seen it.\nAgent: Could you make the inspection three hundred? And arrive at eleven?\nYou: Eleven depends on the first job. About the three hundred, I can— [interrupted]\nAgent: Hello? Did you agree to three hundred?\nYou: Wait, the signal here— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-14",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hi, is this Bright Home Electricians? A customer needs a ceiling fan checked.\nYou: Yes, but not today. Tomorrow afternoon should work.\nAgent: Tomorrow is Thursday, November twenty-sixth. Would four p.m. work?\nYou: No, I meant Friday. I've lost track of the day. Friday the twenty-seventh.\nAgent: Friday at four, then?\nYou: Between four and six. I can't give you an exact minute.\nAgent: What's the inspection fee?\nYou: Two fifty, and if it's just the regulator connection I'll fix it in that.\nAgent: Does that include a new regulator?\nYou: No, the part is extra. If the winding's gone, that's a separate job.\nAgent: Right, Friday twenty-seventh, four p.m., two hundred and fifty total?\nYou: Four to six, not four sharp. Two fifty is the inspection and small connection work, not everything.\nAgent: Can I tell the customer you're definitely coming in that window?\nYou: Yes, Friday between four and six. Send the location.\n"
+  },
+  {
+    "id": "synthetic-15",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, is this Metro Plumbing Repairs?\nYou: Yes, but I'm driving. Be quick.\nAgent: There's a leaking pipe under a customer's sink. Would you take that job?\nYou: Usually, yes. Depends where it is.\nAgent: Near Central Park. Can you come tomorrow morning?\nYou: I might. I'm meant to be out of town, but that may get cancelled.\nAgent: What's your usual visiting fee?\nYou: Usually three hundred around the shop. Central Park is farther, so I haven't quoted that yet.\nAgent: Shall I save three hundred and tomorrow at ten?\nYou: No, neither of those is confirmed. I'll know tonight whether I'm even here.\nAgent: Okay, can we call you again this evening?\nYou: Yes, call after seven. That's when to call me, not when I'm coming to the house.\nAgent: Understood. I'll wait for your availability before promising the customer anything.\nYou: Fine. I need to go now.\n"
+  },
+  {
+    "id": "synthetic-16",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, ഇത് സിറ്റി പ്ലംബിംഗ് ഷോപ്പാണോ? Helpfully ൽ നിന്ന് ഒരു കസ്റ്റമറുടെ കാര്യത്തിന് വിളിക്കുകയാണ്.\nYou: അതെ, എന്താണ് പണി?\nAgent: അടുക്കളയിലെ ടാപ്പ് അടച്ചാലും വെള്ളം പോകുന്നു. വീട്ടിൽ വന്ന് നോക്കുമോ?\nYou: നോക്കാം. ടാപ്പ് ഏതാണെന്ന് ഫോട്ടോ അയക്കൂ.\nAgent: വരാനുള്ള ചാർജ് എത്രയാണ്? റിപ്പയർ ചാർജ് വേറെയാണോ?\nYou: വരുന്നതിന് വേറെ ഫീസ് ഇല്ല. പണി കഴിഞ്ഞ് മൊത്തം പറഞ്ഞാൽ മതി.\nAgent: അപ്പോൾ വന്ന് നോക്കുന്നത് ഫ്രീ ആണല്ലേ?\nYou: പണി ചെയ്യിക്കുന്നുണ്ടെങ്കിൽ വേറെ ഇല്ല എന്നാണ് പറഞ്ഞത്. നോക്കി മാത്രം വിടുകയാണെങ്കിൽ ഇരുന്നൂറ് വേണം.\nAgent: ടാപ്പ് മാറ്റേണ്ടി വന്നാൽ ആ ഇരുന്നൂറിൽ ഉൾപ്പെടുമോ?\nYou: ഇല്ല, സാധനവും പണിക്കൂലിയും വേറെ പറഞ്ഞുതരാം. ഇപ്പോൾ തുക പറയാൻ പറ്റില്ല.\nAgent: നാളെ ഉച്ചയ്ക്ക് രണ്ടുമണിക്ക് വരാമോ?\nYou: നാളെ വരാം. ഉച്ച കഴിഞ്ഞ്, ഇവിടത്തെ പണി തീർന്നിട്ട്.\nAgent: രണ്ടുമണി ഉറപ്പായി പറയട്ടേ?\nYou: സമയം ഉറപ്പിക്കണ്ട. ഇറങ്ങുമ്പോൾ വിളിക്കാം, വീട്ടിൽ ആളുണ്ടോ എന്ന് ചോദിച്ചിട്ട് വരാം.\n"
+  },
+  {
+    "id": "synthetic-17",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: നമസ്കാരം, ദീപം ഇലക്ട്രിക്കൽസിൽ നിന്നാണോ സംസാരിക്കുന്നത്?\nYou: അതെ. എന്താണ് പ്രശ്നം?\nAgent: ഒരു മുറിയിലെ ലൈറ്റ് ഇടയ്ക്കിടെ മങ്ങുന്നു. നാളെ വന്ന് പരിശോധിക്കാമോ?\nYou: വരാം, രാവിലെ പത്തുമണിക്ക് പറ്റും.\nAgent: പരിശോധിക്കാൻ എത്ര ചാർജാണ്?\nYou: മുന്നൂറ്റമ്പത്. സാധനം മാറ്റാനുണ്ടെങ്കിൽ അതും പണിക്കൂലിയും വേറെ.\nAgent: മുന്നൂറ് രൂപയാണോ?\nYou: മുന്നൂറ്റമ്പത്, മൂന്ന് അഞ്ച് പൂജ്യം. ചെറിയ ലൂസ് കണക്ഷൻ ആണെങ്കിൽ അതിൽ ശരിയാക്കാം.\nAgent: നാളെ രാവിലെ പത്ത്, മുന്നൂറ്റമ്പത് പരിശോധിക്കാൻ. ശരിയല്ലേ?\nYou: ഒരു മിനിറ്റ്, പത്തുമണിക്ക് വേറെ ബുക്കിംഗ് ഉണ്ട്. പന്ത്രണ്ടര ആക്കാമോ?\nAgent: രാത്രി പന്ത്രണ്ടരയാണോ?\nYou: അല്ല, നാളെ ഉച്ചയ്ക്ക് പന്ത്രണ്ടര. പകൽ.\nAgent: നാളെ ഉച്ചയ്ക്ക് പന്ത്രണ്ടര ഉറപ്പാണോ, ഫീസ് മാറ്റമില്ലല്ലോ?\nYou: അതെ, ഉറപ്പാണ്. മുന്നൂറ്റമ്പത് തന്നെ. വിലാസം അയച്ചാൽ മതി.\n"
+  },
+  {
+    "id": "synthetic-18",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, ജലധാര പ്ലംബിംഗ് ആണോ? ബാത്ത്റൂമിൽ വെള്ളം പോകുന്നില്ലെന്ന് കസ്റ്റമർ പറയുന്നു.\nYou: എവിടെയാണ്? ഫ്ലാറ്റാണോ വീടാണോ?\nAgent: ഫ്ലാറ്റാണ്, മൂന്നാം നില. നാളെ രാവിലെ ആരെങ്കിലും വരാമോ?\nYou: രാവിലെ വേറെ പണിയുണ്ട്. ഉച്ചയ്ക്ക് ശേഷം നോക്കാം, ഉറപ്പ് പറയുന്നില്ല.\nAgent: വരാനുള്ള ഫീസ് എത്ര?\nYou: അടുത്താണെങ്കിൽ ഇരുന്നൂറ്റമ്പത്. നിങ്ങളുടെ സ്ഥലം അറിയാതെ ഫിക്സ് ചെയ്യാൻ പറ്റില്ല.\nAgent: റെയിൽവേ സ്റ്റേഷന്റെ പുറകിലാണ്. ബ്ലോക്ക് മാറ്റാൻ എത്ര?\nYou: ചെറിയ ബ്ലോക്ക് ആണെങ്കിൽ അറുന്നൂറ് മുതൽ എണ്ണൂറ് വരെ മൊത്തം വരാം. വലിയ ലൈനാണെങ്കിൽ വേറെ.\nAgent: ആ അറുന്നൂറിന് പുറമെ ഇരുന്നൂറ്റമ്പതും കൊടുക്കണോ?\nYou: അല്ല, അതിൽ വരുന്നതും ഉണ്ട്. പക്ഷേ സ്റ്റേഷന്റെ പുറകിൽ ഏത് ഭാഗം?\nAgent: പഴയ പാലത്തിന്റെ അപ്പുറത്ത്. നാളെ മൂന്നുമണി എഴുതട്ടേ?\nYou: അവിടേക്കാണെങ്കിൽ വരാനുള്ളത് ഇരുന്നൂറ്റമ്പത് അല്ല, അത്— [interrupted]\nAgent: പിന്നെ എത്രയാകും? മൂന്നുമണി പറ്റുമോ?\nYou: ഹലോ, കേൾക്കുന്നില്ല. പിന്നെ വിളി— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-19",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: നമസ്കാരം, ഹോം കെയർ ഇലക്ട്രീഷ്യൻ സർവീസാണോ?\nYou: അതെ, വീട്ടിലെ പണിയാണോ?\nAgent: ഫാൻ കറങ്ങുന്നില്ല. കസ്റ്റമർക്ക് നാളെ വൈകിട്ട് വേണം.\nYou: നാളെ വൈകിട്ട് അഞ്ചരയ്ക്ക് വരാം. ഏത് ഏരിയയാണ്?\nAgent: കടവന്ത്ര. വിസിറ്റ് ചാർജ് എത്ര?\nYou: അഞ്ഞൂറ്. നോക്കി എന്താണ് പ്രശ്നമെന്ന് പറഞ്ഞുതരാം. റിപ്പയർ വേറെ.\nAgent: കസ്റ്റമർ മുതിർന്ന ആളാണ്. മുന്നൂറിന് വരാൻ പറ്റുമോ?\nYou: ഫാൻ കടയിൽ കൊണ്ടുവന്നാൽ വരാനുള്ള ചാർജ് ഇല്ല. വീട്ടിലേക്ക് അഞ്ഞൂറാണ്.\nAgent: അപ്പോൾ വീട്ടിലേക്ക് മുന്നൂറ് സമ്മതിച്ചോ?\nYou: ഇല്ല. ഞങ്ങളുടെ മെമ്പർഷിപ്പ് ഉള്ളവർക്കാണ് മുന്നൂറ്. ഇവർക്ക് അതുണ്ടോ?\nAgent: അതറിയില്ല. ചോദിക്കണം.\nYou: ഉണ്ടെങ്കിൽ മുന്നൂറ്, ഇല്ലെങ്കിൽ അഞ്ഞൂറ്. നമ്പർ അയച്ചാൽ പരിശോധിക്കാം.\nAgent: നാളെ വൈകിട്ട് അഞ്ചര ഉറപ്പല്ലേ?\nYou: സമയം ഉറപ്പാണ്. ചാർജ് ഏതാണ് എന്ന് മെമ്പർഷിപ്പ് നോക്കിയിട്ട് പറയാം.\n"
+  },
+  {
+    "id": "synthetic-20",
+    "calledAt": "2026-11-25T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, വിശ്വാസ് പ്ലംബിംഗ്? വീട്ടിലെ വാട്ടർ പമ്പ് ഓണാകുന്നില്ല.\nYou: മോട്ടോർ പണിയാണെങ്കിൽ എല്ലാം ഞങ്ങൾ ചെയ്യില്ല. ആദ്യം നോക്കണം.\nAgent: വന്ന് നോക്കാൻ പറ്റുമോ? നാളെ, ഇരുപത്താറാം തീയതി, രാവിലെ വേണം.\nYou: നാളെ പറ്റില്ല. മറ്റന്നാൾ രാവിലെ ഒമ്പതിന് വരാം.\nAgent: ഇരുപത്താറിന് ഒമ്പത് എന്ന് എഴുതട്ടേ?\nYou: അല്ല, ഇരുപത്തേഴിന്. മറ്റന്നാൾ എന്നാണ് പറഞ്ഞത്.\nAgent: ശരി, ഇരുപത്തേഴിന് രാവിലെ ഒമ്പത്. നോക്കാനുള്ള ഫീസ്?\nYou: മുന്നൂറ്. മോട്ടോർ അഴിച്ചെടുക്കണമെങ്കിൽ അതിന്റെ കൂലി വേറെ പറയാം.\nAgent: മുന്നൂറിൽ റിപ്പയർ ഉൾപ്പെടുമോ?\nYou: ഇല്ല. ചെറിയ സ്വിച്ച് പ്രശ്നമാണെങ്കിൽ നോക്കാം, മോട്ടോർ ഉള്ളിലെ പണി വേറെ ആളിന് കൊടുക്കണം.\nAgent: അപ്പോൾ ഇരുപത്തേഴിന് ഒമ്പതിന് മുന്നൂറ് ഫീസിൽ വരുന്നു?\nYou: നിൽക്കൂ, മറ്റന്നാൾ എനിക്ക് ആശുപത്രിയിൽ പോകണം. ആ സമയം ഒഴിവാക്കൂ.\nAgent: പകരം പത്തുമണിയോ ഉച്ചയ്ക്കോ?\nYou: ഇപ്പോൾ സമയം പറയാൻ പറ്റില്ല. തീയതിയും ഉറപ്പിക്കണ്ട, വീട്ടിൽ ചോദിച്ചിട്ട് തിരിച്ചുവിളിക്കാം.\n"
+  },
+  {
+    "id": "synthetic-33",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, is this Canal Road Plumbing? I'm calling for a customer with a leaking kitchen tap.\nYou: Yes, what kind of tap? The normal wall one or a mixer?\nAgent: They think it's a normal one. Can you come and check before quoting?\nYou: Yes. Checking is free in that building. We maintain the common pipes there.\nAgent: Free if they get the repair done, or even if they say no?\nYou: Even if they don't do it. No visit or inspection charge for that building.\nAgent: The customer has a six-hundred budget. Would that cover the repair?\nYou: I haven't quoted six hundred. I'll see the tap and tell them. A replacement is a different cost.\nAgent: Can you come tomorrow at ten in the morning?\nYou: Ten is fine, tomorrow morning.\nAgent: So no inspection charge, and the repair price comes after you see it?\nYou: Exactly. They can say no to the repair. No checking charge either way.\n"
+  },
+  {
+    "id": "synthetic-34",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hi, am I speaking to East End Electrical? A customer has a loose socket and one dead switch.\nYou: Yes, send photos. I can come tomorrow.\nAgent: What's the inspection charge, and any idea of labour separately?\nYou: Two hundred to check. Labour could be six to eight hundred, plus any parts.\nAgent: Six hundred altogether, including inspection?\nYou: No, the two hundred is separate. But wait, I just opened your photos.\nAgent: Is the socket damaged?\nYou: It's one modular plate. Labour for both jobs will be five hundred flat, not six to eight. Parts and the two-hundred inspection are extra.\nAgent: Can I save five hundred as the labour price, not a range?\nYou: Yes, for what's in those photos. If there's hidden wiring damage, I'll stop and ask before charging for that.\nAgent: Tomorrow at two thirty in the afternoon?\nYou: Yes, tomorrow two thirty. Two hundred inspection, five hundred labour for those jobs, parts extra.\n"
+  },
+  {
+    "id": "synthetic-35",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, Maple Plumbing? A customer says water is leaking beside the bathroom pipe.\nYou: Okay, we do bathroom fittings. Visiting is three hundred.\nAgent: Can you come tomorrow afternoon?\nYou: Probably. Is it the tap connection or inside the wall?\nAgent: They've just sent a message. The wall is damp and the tile will need opening.\nYou: Ah, that's not a fitting replacement then. We don't open walls or do that concealed-line work.\nAgent: Could you at least come and inspect it for the three hundred?\nYou: No, sorry. I can't take this one. They need someone who does that work and puts the tiles back.\nAgent: Could your colleague come instead?\nYou: He's only doing fittings too. Don't book either of us for this.\nAgent: Understood. So the earlier visiting price isn't an offer for this job?\nYou: Right. I'm not coming for this one.\n"
+  },
+  {
+    "id": "synthetic-36",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hello, West Gate Electricians? The customer needs a doorbell checked.\nYou: Yes. Is this the house behind the supermarket?\nAgent: No, across the railway bridge. What is the inspection fee?\nYou: Usually four hundred, but that side is farther. Let me check where it is.\nAgent: Can you do tomorrow morning at eleven?\nYou: Yes, tomorrow at eleven in the morning, that time is okay.\nAgent: Shall I write four hundred for coming and checking?\nYou: Not yet. That was the usual nearby price. Your place will be different.\nAgent: Does the checking fee include any repair?\nYou: No, repair is separate. For coming to that location, it will be five— [interrupted]\nAgent: Five hundred?\nYou: Hello? I can't hear that. I'll send the amount after— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-37",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "english",
+    "transcript": "Agent: Hi, is this Rapid Plumbing? A customer's toilet cistern keeps running.\nYou: Yes, I can check. Visiting and inspection are three hundred and fifty.\nAgent: Does that include changing the mechanism?\nYou: No, I'll quote that after checking. A small adjustment is included.\nAgent: Can you come tomorrow?\nYou: Yes, tomorrow at one thirty.\nAgent: One thirty in the afternoon, right?\nYou: Hello, what? There's a truck beside me.\nAgent: Tomorrow afternoon at one thirty, and three hundred and fifty to check?\nYou: The fee is three fifty, yes. I'm not hearing the other part.\nAgent: Is the arrival afternoon or early morning?\nYou: Just send your question as a message. I can't hear you now.\n"
+  },
+  {
+    "id": "synthetic-38",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, संतोष इलेक्ट्रिकल्स? एक ट्यूबलाइट नहीं जल रही और एक स्विच ढीला है।\nYou: हाँ, फोटो भेजिए। घर आकर देख सकते हैं।\nAgent: आने और चेक करने का कितना होगा?\nYou: दो सौ चेक करने के। फोटो जैसा छोटा काम हुआ तो चार सौ से छह सौ मजदूरी अलग होगी। सामान अलग।\nAgent: तो चार सौ से छह सौ में दो सौ भी शामिल है?\nYou: नहीं, दो सौ देखने का अलग है। चार से छह सौ सिर्फ मजदूरी का अंदाजा है।\nAgent: छह सौ पक्का लिख दूँ?\nYou: अंदाजा है, फिक्स नहीं। अंदर वायर खराब निकली तो पहले अलग बताऊँगा।\nAgent: कल दोपहर सवा दो बजे आना हो पाएगा?\nYou: कल दोपहर सवा दो बजे आ जाऊँगा।\nAgent: दो सौ निरीक्षण, मजदूरी का अंदाजा चार सौ से छह सौ, सामान अलग। ठीक?\nYou: हाँ, और काम शुरू करने से पहले ग्राहक को फाइनल रेट बताऊँगा।\n"
+  },
+  {
+    "id": "synthetic-39",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: हेलो, शिव प्लंबिंग? वॉशबेसिन के नीचे पानी टपक रहा है।\nYou: हाँ, छोटे पाइप का काम हो तो करता हूँ। कल सुबह दस बजे आ सकता हूँ।\nAgent: देखने की फीस कितनी होगी?\nYou: ढाई सौ। पाइप या दूसरा सामान लगेगा तो उसके पैसे और काम की मजदूरी अलग।\nAgent: ठीक, कल सुबह दस बजे ढाई सौ विजिट के साथ?\nYou: एक मिनट, कल सुबह पानी की लाइन वाला बड़ा काम आ गया है। दस बजे मत रखना।\nAgent: फिर शाम पाँच बजे रख दूँ?\nYou: शाम भी अभी पक्का नहीं। उस काम का पता नहीं कितनी देर लगेगी।\nAgent: ढाई सौ वाली बात भी बदल गई क्या?\nYou: नहीं, देखने के ढाई सौ ही हैं। समय अभी नहीं बता सकता।\nAgent: कल किसी समय आएँगे, ऐसा कह सकता हूँ?\nYou: कल का भी वादा मत करो। खाली हुआ तो फोन करूँगा, नहीं तो किसी और दिन।\n"
+  },
+  {
+    "id": "synthetic-40",
+    "calledAt": "2026-12-31T18:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, जनक इलेक्ट्रिकल रिपेयर? कस्टमर का एग्जॉस्ट फैन नहीं चल रहा।\nYou: हाँ, कल आकर देख सकता हूँ। अभी दुकान बंद कर रहा हूँ।\nAgent: अभी इकतीस दिसंबर है। कल यानी एक जनवरी, सही?\nYou: हाँ, नए साल वाले दिन। कल सुबह साढ़े नौ बजे।\nAgent: एक जनवरी दो हजार सत्ताईस, सुबह नौ तीस?\nYou: हाँ, वही। आने और देखने के तीन सौ लगेंगे।\nAgent: उस तीन सौ में क्या शामिल है?\nYou: चेक करना और छोटा कनेक्शन कसना। मोटर या कैपेसिटर बदलना हुआ तो सामान और मजदूरी अलग।\nAgent: अभी मोटर की कीमत बता सकते हैं?\nYou: बिना मॉडल देखे नहीं। पहले चेक करूँगा, फिर बताऊँगा।\nAgent: तो कल नए साल के दिन सुबह साढ़े नौ, तीन सौ निरीक्षण के?\nYou: हाँ, लोकेशन भेज दो।\n"
+  },
+  {
+    "id": "synthetic-41",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: नमस्ते, क्या यह अपना प्लंबर सर्विस है? एक नल फिर से लीक हो रहा है।\nYou: फिर से मतलब हमने पहले बनाया था क्या?\nAgent: ग्राहक को याद है किसी ने पिछले हफ्ते बनाया था, दुकान का नाम नहीं पता।\nYou: हमारी रसीद है तो सात दिन के अंदर दोबारा देखने का पैसा नहीं। हमारी पर्ची नहीं है तो तीन सौ निरीक्षण के।\nAgent: ग्राहक को रसीद नहीं मिल रही। फ्री विजिट लिख दूँ?\nYou: नहीं, पहले नाम या पुराना बिल नंबर देखना पड़ेगा। रिकॉर्ड मिला तो फ्री, नहीं मिला तो तीन सौ।\nAgent: कल शाम सवा छह बजे आ सकते हैं?\nYou: हाँ, कल शाम सवा छह आ सकता हूँ। बिल वाला मामला उससे पहले चेक कर लेना।\nAgent: तो तीन सौ निश्चित है?\nYou: दोनों में से कौन सा लगेगा अभी पता नहीं। पुरानी एंट्री मिल गई तो कुछ नहीं।\nAgent: और रिपेयर का खर्च?\nYou: हमारी वही खराबी होगी तो देखेंगे। नया पार्ट खराब है तो उसका पहले बताऊँगा। अभी रकम मत लिखना।\n"
+  },
+  {
+    "id": "synthetic-42",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "hindi",
+    "transcript": "Agent: हेलो, साहिल प्लंबिंग? किचन की लाइन में जाम है, घर पर आ सकते हैं?\nYou: हाँ, पता कहाँ है? एक मिनट, दुकान में शोर है।\nAgent: मार्केट के पीछे वाली गली। सिर्फ चेक करने की फीस?\nYou: अरे उसको सात सौ वापस दे दो, वह कल वाला ग्राहक है। हाँ जी, आप क्या पूछ रहे थे?\nAgent: सात सौ आने के लगेंगे?\nYou: नहीं, वह यहाँ दुकान की बात थी। आपके यहाँ देखने के तीन सौ।\nAgent: जाम खोलने के कितने?\nYou: मशीन लगेगी या हाथ से होगा, देखकर बताऊँगा। अभी रेट नहीं दे सकता।\nAgent: कल सुबह पौने ग्यारह?\nYou: हाँ, कल सुबह दस पैंतालीस पर आता हूँ।\nAgent: तीन सौ चेक करने के, मशीन या मरम्मत का खर्च देखकर बताएँगे?\nYou: बिल्कुल। सात सौ वाली बात इसमें मत जोड़ना।\n"
+  },
+  {
+    "id": "synthetic-43",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ನಮಸ್ಕಾರ, ಸಪ್ತಗಿರಿ ಎಲೆಕ್ಟ್ರಿಕಲ್ಸ್ ಅವರಾ? ಒಂದು ಫ್ಯಾನ್ ಮತ್ತು ಎರಡು ಸ್ವಿಚ್ ಚೆಕ್ ಮಾಡಬೇಕು.\nYou: ಹೌದು, ಮನೆಗೆ ಬರಬಹುದು. ಎಲ್ಲಿ ಇದೆ?\nAgent: ಮೈಸೂರು ರೋಡ್ ಮೆಟ್ರೋ ಹತ್ತಿರ. ಬರೀ ಚೆಕ್ ಮಾಡುವ ಫೀ ಎಷ್ಟು?\nYou: ಮನೆಗೆ ಒಂದು ಸಲ ಬರೋದಕ್ಕೆ ಮುನ್ನೂರು. ಹೇಳಿದ ಮೂರನ್ನೂ ಚೆಕ್ ಮಾಡ್ತೀನಿ.\nAgent: ಒಂದೊಂದಕ್ಕೆ ಮುನ್ನೂರಾ? ಒಟ್ಟು ಒಂಬೈನೂರಾ?\nYou: ಅಲ್ಲ, ಎಲ್ಲವನ್ನೂ ಚೆಕ್ ಮಾಡೋದಕ್ಕೆ ಒಟ್ಟು ಮುನ್ನೂರು. ರಿಪೇರಿ ಮಾಡಿದರೆ ಅದರ ಲೇಬರ್ ಬೇರೆ.\nAgent: ಮೆಟೀರಿಯಲ್ ಕೂಡ ಬೇರೇನಾ?\nYou: ಹೌದು, ಬದಲಿಸುವ ಸಾಮಾನು ಬೇರೆ. ಏನು ಬೇಕು ಅಂತ ನೋಡದೆ ಈಗ ಹೇಳಲ್ಲ.\nAgent: ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಹನ್ನೊಂದೂ ಕಾಲಿಗೆ ಬರಬಹುದಾ?\nYou: ಹೌದು, ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಹನ್ನೊಂದೂ ಕಾಲಿಗೆ ಬರುತ್ತೀನಿ.\nAgent: ಒಟ್ಟು ಮುನ್ನೂರು ಚೆಕ್ ಮಾಡಲು, ರಿಪೇರಿ ಮತ್ತು ಸಾಮಾನು ಬೇರೆ. ಸರಿನಾ?\nYou: ಹೌದು, ಒಂಬೈನೂರು ಅಲ್ಲ. ವಿಳಾಸ ಕಳಿಸಿ.\n"
+  },
+  {
+    "id": "synthetic-44",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ಹಲೋ, ಗಣೇಶ್ ಪ್ಲಂಬಿಂಗ್ ಸರ್ವಿಸ್? ಅಡುಗೆಮನೆ ಸಿಂಕ್ ಪೈಪ್ ಸೋರಿಕೆ ಆಗುತ್ತಿದೆ.\nYou: ಹೌದು. ಫೋಟೋ ಕಳಿಸಿ, ಯಾವ ಪೈಪ್ ಅಂತ ನೋಡೋಣ.\nAgent: ಕಳಿಸಿದ್ದೇನೆ. ಬರೋದಕ್ಕೆ ಎಷ್ಟು ಫೀ?\nYou: ಇದು ಸಣ್ಣ ಕನೆಕ್ಟರ್ ಕೆಲಸ. ಬಂದು ಸರಿಮಾಡಿ ಎಲ್ಲ ಸೇರಿ ಎಂಟು ನೂರು ಆಗಬಹುದು.\nAgent: ಎಂಟು ನೂರು ವಿಸಿಟ್ ಫೀನಾ?\nYou: ಅಲ್ಲ, ಬರುವುದು, ಸಾಮಾನು, ಕೆಲಸ ಎಲ್ಲ ಸೇರಿ ಅಂದಾಜು ಎಂಟು ನೂರು.\nAgent: ರಿಪೇರಿ ಮಾಡಿಸದೆ ಬರೀ ನೋಡಿದರೆ ಎಷ್ಟು ಕೊಡಬೇಕು?\nYou: ಹಾಗೆ ಬರೀ ನೋಡೋದಕ್ಕೆ ಬೇರೆ ರೇಟ್ ಈಗ ಹೇಳಿಲ್ಲ. ಮೊದಲು ಕಸ್ಟಮರ್ ಪಣಿ ಮಾಡಿಸ್ತಾರಾ ಕೇಳಿ.\nAgent: ನಾಳೆ ಸಂಜೆ ಐದು ಗಂಟೆಗೆ ಬರುವಿರಾ?\nYou: ನಾಳೆ ಐದಕ್ಕೆ ಬರುತ್ತೀನಿ, ಸಂಜೆ.\nAgent: ಹಾಗಾದರೆ ವಿಸಿಟ್ ಫೀ ಜೀರೋ ಅಂತ ಇಡಬಹುದಾ?\nYou: ಹಾಗೆ ಇಡಬೇಡಿ. ಎಂಟು ನೂರು ಪಣಿ ಮಾಡಿದರೆ ಒಟ್ಟು ಹೇಳಿದ್ದು. ಬರೀ ನೋಡುವ ಚಾರ್ಜ್ ನಂತರ ಮಾತಾಡೋಣ.\n"
+  },
+  {
+    "id": "synthetic-45",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ನಮಸ್ಕಾರ, ದೀಪ ಎಲೆಕ್ಟ್ರಿಕಲ್ಸ್? ಮೋಟರ್ ಆನ್ ಮಾಡಿದಾಗ ಬ್ರೇಕರ್ ಟ್ರಿಪ್ ಆಗುತ್ತಿದೆ.\nYou: ಮೋಟರ್ ಮತ್ತೆ ಮತ್ತೆ ಆನ್ ಮಾಡಬೇಡಿ. ನಾಳೆ ಬಂದು ನೋಡ್ತೀನಿ.\nAgent: ಯಾವ ಟೈಮಿಗೆ ಬರಬಹುದು?\nYou: ಮಧ್ಯಾಹ್ನ ಎರಡು ಗಂಟೆಯಿಂದ ಮೂರು ಗಂಟೆ ಒಳಗೆ.\nAgent: ಎರಡೂವರೆ ಅಂತ ಬರೆಯಲಾ?\nYou: ಇಲ್ಲ, ಆ ಟೈಮ್ ಮಧ್ಯದಲ್ಲಿ ಹಾಕಬೇಡಿ. ಆ ಒಂದು ಗಂಟೆ ಒಳಗೆ ಬರುತ್ತೀನಿ.\nAgent: ಬಂದು ಚೆಕ್ ಮಾಡೋದಕ್ಕೆ ಫೀ?\nYou: ನಾಲ್ಕು ನೂರು. ವೈಯರಿಂಗ್ ಸಮಸ್ಯೆ ಅಥವಾ ಮೋಟರ್ ಸಮಸ್ಯೆ ಅಂತ ಚೆಕ್ ಮಾಡ್ತೀನಿ. ರಿಪೇರಿ ರೇಟ್ ಬೇರೆ.\nAgent: ನಾಲ್ಕು ನೂರು ವಿಸಿಟ್, ನಾಳೆ ಎರಡು ಮೂರೆ ಒಳಗೆ ಖಚಿತವಾ?\nYou: ಹೌದು, ಆ ವಿಂಡೋ ಖಚಿತ. ಹೊರಡುವಾಗ ಕಾಲ್ ಮಾಡ್ತೀನಿ.\nAgent: ಕಸ್ಟಮರ್ ನಿಖರ ಸಮಯ ಕೇಳಿದರೆ?\nYou: ಈಗ ನಿಖರ ಸಮಯ ಹೇಳಲ್ಲ. ಎರಡು ಗಂಟೆ ಅಂತ ಪಕ್ಕಾ ಹೇಳಬೇಡಿ.\n"
+  },
+  {
+    "id": "synthetic-46",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "kannada",
+    "transcript": "Agent: ಹಲೋ, ಕೃಷ್ಣ ಪ್ಲಂಬಿಂಗ್ ಅಂಗಡಿಯಾ? ಬಾತ್‌ರೂಮ್ ಫ್ಲಷ್ ನಿಲ್ಲದೆ ನೀರು ಹೋಗುತ್ತಿದೆ.\nYou: ಹೌದು, ಆ ಪಣಿ ಮಾಡ್ತೀನಿ. ಫೋಟೋ ಬೇಕು.\nAgent: ಫೋಟೋ ಸ್ವಲ್ಪ ಹೊತ್ತಿನಲ್ಲಿ ಕಳಿಸುತ್ತಾರೆ. ಬಂದು ನೋಡುವ ಫೀ ಎಷ್ಟು?\nYou: ಇನ್ನೂರೈವತ್ತು ನೋಡೋದಕ್ಕೆ. ರಿಪೇರಿ ಮಾಡಿದರೆ ಆ ಹಣ ಫೈನಲ್ ಬಿಲ್ಲಿನಲ್ಲಿ ಕಡಿಮೆ ಮಾಡ್ತೀನಿ.\nAgent: ರಿಪೇರಿ ಸಾವಿರ ಆದ್ರೆ ಇನ್ನೂರೈವತ್ತು ಮೇಲೆ ಸಾವಿರ ಕೊಡಬೇಕಾ?\nYou: ಅಲ್ಲ, ಸಾವಿರ ಉದಾಹರಣೆ ತಗೊಂಡರೆ ಇನ್ನೂರೈವತ್ತು ಕೊಟ್ಟ ಮೇಲೆ ಏಳುನೂರೈವತ್ತು ಸಾಕು. ಈ ಪಣಿಗೆ ಸಾವಿರ ಅಂತ ಹೇಳಿಲ್ಲ.\nAgent: ಸರಿ, ಕಸ್ಟಮರ್‌ಗೆ ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಒಂಬತ್ತು ಗಂಟೆಗೆ ಬೇಕು.\nYou: ನಾಳೆ ಬೆಳಿಗ್ಗೆ ಬೇರೆ ಕಾಲ್ ಇದೆ. ಸಂಜೆ ಮಾತ್ರ ನೋಡಬಹುದು.\nAgent: ಸಂಜೆ ಆರು ಗಂಟೆ ಪಕ್ಕಾ ಮಾಡಬಹುದಾ?\nYou: ಆರು ಗಂಟೆ ಅಂದ್ರೆ ನಾನು— [interrupted]\nAgent: ಆರುಕ್ಕೆ ಒಪ್ಪಿದ್ದೀರಾ? ಹಲೋ?\nYou: ಮೊದಲು ನನ್ನ ಆ ಕೆಲಸ— [call disconnected]\n"
+  },
+  {
+    "id": "synthetic-47",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, പ്രകാശ് ഇലക്ട്രിക്കൽസ് ആണോ? ഒരു ഫാൻ പ്രവർത്തിക്കുന്നില്ല, വീട്ടിൽ വന്ന് നോക്കാമോ?\nYou: അതെ, ഏത് സ്ഥലമാണ്?\nAgent: ബസ് സ്റ്റാൻഡിന് അടുത്ത്. നോക്കാനുള്ള ഫീസ് എത്ര?\nYou: സാധാരണ അഞ്ഞൂറാണ്. ബസ് സ്റ്റാൻഡിന് അടുത്താണെങ്കിൽ നാനൂറ് മതി.\nAgent: അഞ്ഞൂറ് യാത്രക്കും നാനൂറ് നോക്കുന്നതിനും, രണ്ടും വേറെയാണോ?\nYou: അല്ല, നിങ്ങളുടെ സ്ഥലത്ത് വരാനും നോക്കാനും മൊത്തം നാനൂറ്. അഞ്ഞൂറ് കൂട്ടണ്ട.\nAgent: റിപ്പയർ അതിൽ ഉൾപ്പെടുമോ?\nYou: ചെറിയ കണക്ഷൻ ശരിയാക്കുന്നത് ഉൾപ്പെടും. പാർട്ടും വേറെ വലിയ പണിയും അധികം, ആദ്യം വില പറയും.\nAgent: നാളെ വൈകിട്ട് അഞ്ചേകാലിന് വരാമോ?\nYou: നാളെ വൈകിട്ട് അഞ്ചേകാലിന് വരാം.\nAgent: നാനൂറ് നോക്കുന്നതിനും ചെറിയ കണക്ഷൻ പണിക്കും, നാളെ വൈകിട്ട് അഞ്ച് പതിനഞ്ച്. ശരിയല്ലേ?\nYou: അതെ, അതാണ്. ലൊക്കേഷൻ അയക്കൂ.\n"
+  },
+  {
+    "id": "synthetic-48",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: നമസ്കാരം, ആശ്രയ പ്ലംബിംഗ് ആണോ? കസ്റ്റമറുടെ ടാങ്കിൽ നിന്ന് ഓവർഫ്ലോ ഉണ്ട്.\nYou: അതെ. ഫ്ലോട്ട് വാൽവ് ആയിരിക്കാം. നേരിൽ നോക്കണം.\nAgent: നാളെ രാവിലെ വരാൻ പറ്റുമോ?\nYou: നാളെയോ മറ്റന്നാളോ രാവിലെ പത്തുമണിക്ക് വരാം. ഏത് ദിവസം എന്ന് ഇപ്പോൾ അറിയില്ല.\nAgent: നാളെ പത്തുമണി എന്ന് കസ്റ്റമറോട് പറയട്ടേ?\nYou: ദിവസം ഉറപ്പിക്കണ്ട. പത്തുമണി രാവിലെ എന്നത് ശരി, പക്ഷേ ഏത് ദിവസമെന്ന് വൈകിട്ട് പറയാം.\nAgent: നോക്കാനുള്ള ഫീസ് എത്രയാകും?\nYou: മുന്നൂറ്. ചെറിയ അഡ്ജസ്റ്റ്മെന്റ് ചെയ്താൽ അതിൽ ചെയ്യും. വാൽവ് മാറ്റാൻ സാധനവും പണിയും വേറെ.\nAgent: മുന്നൂറ് ഫീസ് ഉറപ്പാണ്, വരാനുള്ള ദിവസം മാത്രം അറിയില്ല, അല്ലേ?\nYou: അതെ. ഒന്നുകിൽ നാളെ, അല്ലെങ്കിൽ മറ്റന്നാൾ. തീരുമാനിച്ചിട്ട് വിളിക്കാം.\nAgent: രണ്ടിൽ ഒന്ന് ഞാൻ തന്നെ തിരഞ്ഞെടുക്കാമോ?\nYou: വേണ്ട, ഞാൻ പറഞ്ഞിട്ട് മാത്രം ദിവസം എഴുതൂ.\n"
+  },
+  {
+    "id": "synthetic-49",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, വീട്ടിലെ കിച്ചൻ ലൈറ്റ് മങ്ങുന്നു. ഇത് കിരൺ ഇലക്ട്രിക്കൽ സർവീസാണോ?\nYou: അതെ, ശബ്ദം കുറവാണ്. എന്താണ് പണി?\nAgent: ലൈറ്റ് മങ്ങുന്നതാണ്. വന്ന് നോക്കുന്നതിന് എത്ര?\nYou: നോക്കാൻ ഇരുന്നൂറ്റമ്പത്. റിപെയറും സാധനവും വേറെ പറയാം.\nAgent: നാളെ വൈകിട്ട് ആറുമണിക്ക് വരാമോ?\nYou: ഇവിടെ ഒരാൾ ചോദിക്കുകയാണ്, ഒരു മിനിറ്റ്. ആ ബോക്സ് അവിടെ വെച്ചോളൂ, ശരി ശരി.\nAgent: ശരി എന്നു പറഞ്ഞത് നാളെ ആറുമണിക്ക് വരാമെന്നാണോ?\nYou: അല്ല, അത് ഇവിടെ പറഞ്ഞതാണ്. നിങ്ങളുടെ സമയം ഞാൻ കേട്ടില്ല.\nAgent: നാളെ വൈകിട്ട് ആറുമണി?\nYou: നാളെ എനിക്ക് വേറെ പണിയുണ്ട്. വൈകിട്ട് നോക്കാം, ഇപ്പോൾ ഉറപ്പില്ല.\nAgent: ആറെങ്കിലും പറ്റുമോ? ഉറപ്പിച്ചു പറയാമോ?\nYou: ഇപ്പോൾ വേണ്ട. വൈകിട്ട് തിരിച്ചു വിളിച്ചിട്ട് സമയം പറയാം.\n"
+  },
+  {
+    "id": "synthetic-50",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "language": "malayalam",
+    "transcript": "Agent: ഹലോ, നീല പ്ലംബിംഗ്? ബാത്ത്റൂം ടാപ്പ് ലീക്കാണ്. വീട്ടിൽ വന്ന് നോക്കുമോ?\nYou: നോക്കാം. എന്നാൽ ഇന്ന് പണി ചെയ്യാൻ സമയമില്ല, നാളെ വരാം.\nAgent: നാളെ രാവിലെ പതിനൊന്ന് മണിക്ക് വരാമോ? കസ്റ്റമർക്ക് ആദ്യം വില അറിഞ്ഞാൽ മതി.\nYou: നാളെ രാവിലെ പതിനൊന്ന് പറ്റും. നോക്കി വില പറയാൻ ഇരുന്നൂറ് വേണം.\nAgent: അതു കൊടുത്താൽ റിപ്പയറും ചെയ്യണം എന്നുണ്ടോ?\nYou: ഇല്ല. നോക്കി ക്വോട്ട് പറയും. ഇഷ്ടമില്ലെങ്കിൽ പണി വേണ്ട, നോക്കിയതിന് ഇരുന്നൂറ് മാത്രം.\nAgent: റിപ്പയർ വില ഇപ്പോൾ ഒരു റേഞ്ച് പറയാമോ?\nYou: ഫോട്ടോ ഇല്ലാതെ പറ്റില്ല. കണ്ടിട്ട് പറയാം. സമ്മതിച്ചാൽ മാത്രം പണി തുടങ്ങും.\nAgent: പണി ചെയ്യിച്ചാൽ ആ ഇരുന്നൂറ് കുറയ്ക്കുമോ?\nYou: ഇല്ല, അത് നോക്കാനുള്ളതാണ്. പണിക്കൂലി വേറെ, സാധനം വേറെ. ഇരുന്നൂറ് വീണ്ടും കൂട്ടില്ല, പക്ഷേ കുറയ്ക്കുകയുമില്ല.\nAgent: നാളെ രാവിലെ പതിനൊന്ന്, ഇരുന്നൂറ് ഇൻസ്പെക്ഷൻ, റിപ്പയർ വില കണ്ടിട്ട് വേറെ. ശരിയല്ലേ?\nYou: അതെ. നോക്കാൻ വരുന്നത് ഉറപ്പാണ്. റിപ്പയർ ചെയ്യണമോ എന്ന് അവർ തീരുമാനിക്കട്ടെ.\n"
+  }
+]

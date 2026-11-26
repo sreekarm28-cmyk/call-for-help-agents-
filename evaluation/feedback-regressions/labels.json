@@ -1,0 +1,42 @@
+[
+  {
+    "id": "feedback-afternoon",
+    "expected": {
+      "visit_fee": 500,
+      "visit_date": "2026-11-27",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "review_status": "assistant_labeled_awaiting_human_review"
+  },
+  {
+    "id": "feedback-discount-interrupted",
+    "expected": {
+      "visit_fee": 400,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "review_status": "assistant_labeled_awaiting_human_review"
+  },
+  {
+    "id": "feedback-discount-accepted",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": "2026-11-27",
+      "visit_time": "11:00",
+      "enough_info": "yes"
+    },
+    "review_status": "assistant_labeled_awaiting_human_review"
+  },
+  {
+    "id": "feedback-quote-withdrawn",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-27",
+      "visit_time": "15:00",
+      "enough_info": "no"
+    },
+    "review_status": "assistant_labeled_awaiting_human_review"
+  }
+]

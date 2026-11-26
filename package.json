@@ -26,7 +26,9 @@
     "test:call-limit": "node --import tsx tests/provider-flow.ts call-limit",
     "test:confirmation": "node --import tsx tests/provider-flow.ts confirmation",
     "test:provider-recall": "node --import tsx tests/provider-flow.ts provider-recall",
-    "test:provider-preferences": "node --import tsx tests/provider-flow.ts provider-preferences"
+    "test:provider-preferences": "node --import tsx tests/provider-flow.ts provider-preferences",
+    "evals": "tsx server/evaluation/server.ts",
+    "test:evaluations": "node --import tsx --test tests/evaluation-flow.ts tests/evaluation-resume.ts tests/location-evaluation.ts tests/location-validation.ts"
   },
   "dependencies": {
     "@langfuse/otel": "^6.1.1",

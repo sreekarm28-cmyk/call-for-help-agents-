@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Helpfully · Location evaluation</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/location.css"><script src="/location.js" defer></script></head>
+<body><header class="topbar"><a class="brand" href="/">helpfully <span>/ developer</span></a><span class="divider"></span><span>Evaluations</span><span class="local-badge">Local laptop only</span></header>
+<main><nav class="eval-navigation" aria-label="Evaluation component"><a href="/">Transcript</a><a href="/location.html" aria-current="page">Location</a></nav>
+<div class="page-heading"><div><h1>Location evaluation</h1><p>Check the existing address lookup against your manually verified reference pins.</p></div><span class="pill">500 metre target</span></div>
+<div id="location-error" role="alert" class="alert error" hidden></div>
+<div class="workspace"><section class="panel"><header class="panel-heading"><h2>Test addresses</h2><span class="muted small">Reference pins are your answer key</span></header>
+<form id="location-form" class="panel-body" novalidate><fieldset id="location-inputs" class="stack">
+<div class="tabs" role="tablist" aria-label="Location input method"><button type="button" id="location-manual-tab" role="tab" aria-controls="location-manual" aria-selected="true">Enter manually</button><button type="button" id="location-batch-tab" role="tab" aria-controls="location-batch" aria-selected="false">Dataset</button></div>
+<div id="location-manual" role="tabpanel" aria-labelledby="location-manual-tab" class="stack">
+<label class="field">Address to verify<textarea id="location-address" rows="4" placeholder="Street or landmark, area, city, state and PIN code"></textarea></label>
+<label class="consent"><input type="checkbox" id="location-valid" checked><span>This address should return a location</span></label>
+<div id="location-reference" class="pair"><label class="field">Reference latitude<input id="location-latitude" type="number" min="-90" max="90" step="any" placeholder="12.934827"></label><label class="field">Reference longitude<input id="location-longitude" type="number" min="-180" max="180" step="any" placeholder="77.537381"></label></div>
+<p class="hint">Uncheck for a deliberately invalid address. A technical/API failure never counts as correct rejection.</p></div>
+<div id="location-batch" role="tabpanel" aria-labelledby="location-batch-tab" class="stack" hidden>
+<button type="button" class="secondary" id="location-collected">Load my 15 collected addresses</button>
+<label class="upload"><strong>Upload location cases</strong><span class="small muted">JSON array or JSONL · up to 100 cases · 2 MB</span><input id="location-file" type="file" accept=".json,.jsonl,application/json"></label>
+<label class="field">Dataset preview · editable<textarea id="location-json" rows="9" spellcheck="false" placeholder='[{"id":"area-1","address":"Street, Bengaluru 560085","expectedLocation":{"latitude":12.934827,"longitude":77.537381}}]'></textarea></label>
+<p class="hint">Check the pins before scoring. Broad areas such as “Whitefield” are ambiguous; a lookup may find another valid part of that area. This dataset is user collected, not independently verified.</p></div>
+</fieldset>
+<button type="button" id="location-validate" class="secondary">Validate inputs</button><p id="location-validation" class="alert" hidden></p>
+<label class="consent"><input type="checkbox" id="location-consent"><span>I agree to send these addresses to Google through the existing backend lookup. Calls may use API quota or incur charges; fallback lookups may use more than one request per address.</span></label>
+<div class="actions"><button type="submit" id="location-run" class="primary" disabled>Run location evaluation</button><a id="location-download" hidden>Download results</a></div>
+</form></section>
+<section class="panel"><header class="panel-heading"><h2>Location scores</h2><span class="pill" id="location-status">Not run</span></header><div class="panel-body">
+<p id="location-progress" class="hint" role="status">Validate your inputs, then run.</p><div id="location-scores" class="score-grid"></div>
+<details class="help" open><summary>How scores are calculated</summary><dl>
+<dt>Within 500 m — higher is better</dt><dd>Valid-address cases returned within 500 m of the reference ÷ all valid-address cases. Failed lookups remain in the denominator. During a run, unprocessed cases are not yet passes.</dd>
+<dt>Lookup success</dt><dd>Cases returning coordinates ÷ all cases. Includes invalid test addresses, so a high score alone does not mean good quality.</dd>
+<dt>False acceptance — lower is better</dt><dd>Deliberately invalid addresses returning coordinates ÷ all deliberately invalid addresses. N/A when none are provided.</dd>
+<dt>Correct rejection — higher is better</dt><dd>Invalid addresses rejected as unresolved ÷ all invalid addresses. Provider failures do not count as rejections.</dd>
+<dt>Median distance error</dt><dd>The middle straight-line distance error among positive cases that returned coordinates. Failed lookups are excluded here and counted in accuracy instead.</dd>
+<dt>Average response time</dt><dd>Total lookup time ÷ processed cases, including failed lookups.</dd>
+</dl></details><p class="hint">Uses the same verifyServiceAddress function as the product. No LLM judge, database writes, provider searches, or telephone calls. The map-pin choice flow is tested separately by npm run test:location.</p></div></section></div>
+<section class="panel"><header class="panel-heading"><h2>Address results</h2><span class="hint">Distances are straight-line, not road distances</span></header><div class="table-wrap"><table><thead><tr><th>Case / address</th><th>Reference pin</th><th>Returned location</th><th>Distance</th><th>Time</th><th>Result</th></tr></thead><tbody id="location-results"><tr><td colspan="6">No results yet.</td></tr></tbody></table></div></section>
+<section class="panel"><header class="panel-heading"><h2>Location run history</h2><button type="button" id="location-refresh" class="secondary">Refresh</button></header><div class="table-wrap"><table><thead><tr><th>Started</th><th>Status</th><th>Cases</th><th>Within 500 m</th><th>Inspect</th></tr></thead><tbody id="location-history"></tbody></table></div></section>
+<footer>Saved locally in output/location-evaluation-runs. No addresses are sent to Google until you run a test. Interrupted runs retain completed results; unfinished cases require a new run.</footer>
+</main></body></html>

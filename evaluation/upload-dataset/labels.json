@@ -1,0 +1,771 @@
+[
+  {
+    "id": "synthetic-01",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-26",
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "12b0b45a8be24982c6f6e9f4c9b831d2c43e1a7c37d2462bb65a7ad7d975ee56",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-02",
+    "expected": {
+      "visit_fee": 250,
+      "visit_date": "2026-11-26",
+      "visit_time": "10:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "db894c9b0742142f4cdc4580010f55515be0bccf00000b75d6ba133d38a9ebba",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-03",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "82d89fb7da55e4c9e21109cccdf635672ac006f75a2dcdff2e9a454590ce9b26",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-04",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "f9b8b4cfa63cc246e85660df8b07b0c9500822c958b56bc91cca69892cb83bba",
+    "needs_adjudication": true,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "requires_human_adjudication",
+      "exclude_from_strict_scoring": [
+        "visit_fee"
+      ],
+      "reason": "After withdrawing the night visit, the provider still explicitly states a daytime inspection tariff of 400. The existing label leaves visit_fee null because no daytime visit is settled. A reviewer could reasonably retain 400 as a quoted daytime fee independent of scheduling. The wording must be adjudicated before scoring this field. enough_info stays no because no day or arrival period is agreed.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-05",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "ebce07f8aee1a7d2ac2297fe88936ac1224edb9fe41eab21f469baa2773143a1",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-06",
+    "expected": {
+      "visit_fee": 100,
+      "visit_date": "2026-11-26",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "d1339cfbcd9c0a362abb3dc242e4aaab27202bc80136efde9f9dc2d6b998eabd",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-07",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-26",
+      "visit_time": "11:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "d049d360bd6b5886b51dfe141e466ecce21baabcb92c0d60f5bbc5016471cb7e",
+    "needs_adjudication": true,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "requires_human_adjudication",
+      "exclude_from_strict_scoring": [
+        "repair_fee_min",
+        "repair_fee_max"
+      ],
+      "reason": "The 600 is explicitly labour for both fans but includes coming, while 200 applies only to inspection without work. Existing bounds retain 600 with that condition. The current separately quoted repair-field definition may instead require leaving bounds null and describing 600 only in notes. Decide this representation before strict scoring. The clear date, exact time and inspection-only 200 still make enough_info yes.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-08",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-26",
+      "visit_time": "15:00",
+      "enough_info": "no"
+    },
+    "transcriptSha256": "1b42c86931fdd61c8fcc54b11d0edfe85bc018b93383a6932ba96f461064ca1c",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-09",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": "2026-11-27",
+      "visit_time": "18:00",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "f56942cb41e5496296780ff23da3bd53bea1beaf2a950bece8e1700bd76025a6",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-10",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "99cfdeea4f182d158990f02e95c2379f5c93300c8b2d30971749896ed44f7118",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-11",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-26",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "dfe9b63ce89627230dd71244f1efc0171c31b5ce72c70411bfad604db0ae1592",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-12",
+    "expected": {
+      "visit_fee": 350,
+      "visit_date": "2026-11-26",
+      "visit_time": "15:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "c97149c62b433d0ff47f36a46dd59a33f6e56cebceb0103a39770a109f951e64",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-13",
+    "expected": {
+      "visit_fee": 400,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "4e641da8c969c2936720bccd8ae3cfb55bd66a2ff58fc464f5402b2448967d3d",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-14",
+    "expected": {
+      "visit_fee": 250,
+      "visit_date": "2026-11-27",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "a5877fe9054f7952fb4ac7ba67945d9918efb99b29d27bc823c2fe6cf512545e",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-15",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "29cf558e63e2951f6f8db09643e2700757cf540d3614a439130f4530b339eca9",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-16",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-26",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "034dcce09224111d9027e8fd1a6eb2bd290dccde03922f4628a483de4c742985",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-17",
+    "expected": {
+      "visit_fee": 350,
+      "visit_date": "2026-11-26",
+      "visit_time": "12:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "ad178e210e6108831e2e372a11837be1f8e0d1077803d0522600f0a162c0340d",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-18",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "f4fe1436ddd01afec96c148827c1d807c2c6de5ab7e00a2e2a41a3d0053b39c9",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-19",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-26",
+      "visit_time": "17:30",
+      "enough_info": "no"
+    },
+    "transcriptSha256": "fee49871ba286b5dd493ed0038c0103157fc87ca919c720ddaae1a88bf58144a",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-20",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "369086e7491a6f4bf1baa827e68531cf1bbde811d544a0be3d48940d0b05a049",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-33",
+    "expected": {
+      "visit_fee": 0,
+      "visit_date": "2026-11-27",
+      "visit_time": "10:00",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "5a1fb287d5c96f872f753e3a5c993c68bca55440576dad1131fb6015562501bd",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-34",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-27",
+      "visit_time": "14:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "ab69c97b35b62a524b1e5e398d739c77c38c6b5caa6976fd0b19bea49a35d575",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-35",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "7cb4f1cb22fca08928cdfc4eda6d28271006a6fdc5c6f7f4e747a188028ac37b",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-36",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-27",
+      "visit_time": "11:00",
+      "enough_info": "no"
+    },
+    "transcriptSha256": "c5c9db5a0220fcab578946bb1c9926c75d7581295f70bf588176154c06cc9387",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-37",
+    "expected": {
+      "visit_fee": 350,
+      "visit_date": "2026-11-27",
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "ef0bd355ca1997837102a51354a67057ededbaa882d3cf74b455811459ba5358",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-38",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-27",
+      "visit_time": "14:15",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "f76ad285a9a076162709796fc17a7a8a4bf8d61ad194c73f0b7788cacf8b17e3",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-39",
+    "expected": {
+      "visit_fee": 250,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "9c3091ace188c3ead10ce6031fe65a46d90f7ef212c9cf925c76935fc56663b2",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-40",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": "2027-01-01",
+      "visit_time": "09:30",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "df64669abbc931f2b3383e6d55fe2a3126b5af3ff10f4461ea37beaa14dc8e55",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-41",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-27",
+      "visit_time": "18:15",
+      "enough_info": "no"
+    },
+    "transcriptSha256": "5bb90927bc35d0c451079b5fde1f743159f5af0a68950ea4f8de2123a2b48347",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-42",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": "2026-11-27",
+      "visit_time": "10:45",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "15c71da2ff4125ee7e613b8dfe5691aa25232e799d49bc0ab703c5b7bc41c66c",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-43",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": "2026-11-27",
+      "visit_time": "11:15",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "1c18c1f8bea77b72d87be8f438e2da130e771fa2bab7d0720e65e95c6147c1be",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": "The spelling ಒಂಬೈನೂರು for nine hundred is nonstandard/colloquial. A fluent reviewer should check local phrasing; the numerical correction remains explicit."
+    }
+  },
+  {
+    "id": "synthetic-44",
+    "expected": {
+      "visit_fee": null,
+      "visit_date": "2026-11-27",
+      "visit_time": "17:00",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "1d63f590d4a4d91541a226233f80855c1a5249e677906c2712a8ce43a35d59d3",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": "The Kannada uses ಪಣಿ for work. The total quote versus inspection distinction is clear, but the phrasing should receive fluent-human review."
+    }
+  },
+  {
+    "id": "synthetic-45",
+    "expected": {
+      "visit_fee": 400,
+      "visit_date": "2026-11-27",
+      "visit_time": null,
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "66e6289dc799948266db418729cb2d056df97e4b0dcb28ed64bf2f415509b7e0",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": "The Kannada recap ಎರಡು ಮೂರೆ ಒಳಗೆ is awkward; the provider clearly states a 2–3 PM window elsewhere. Check naturalness with a fluent speaker."
+    }
+  },
+  {
+    "id": "synthetic-46",
+    "expected": {
+      "visit_fee": 250,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "d4df58f43382c58b11d74fc491e96a3e0df1dff6c14f0e8387f3149493e2f245",
+    "needs_adjudication": true,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "requires_human_adjudication",
+      "exclude_from_strict_scoring": [
+        "provider_response",
+        "visit_date",
+        "enough_info"
+      ],
+      "reason": "The Kannada phrase about only being able to look in the evening can be read as a tentative alternative or an offer for tomorrow evening. The final answer is cut off before an exact time is accepted. Under the new broad-period enough_info rule, this distinction affects whether enough_info is yes or no. A fluent independent reviewer should adjudicate it; the current conservative labels are not certified.",
+      "language_note": "The Kannada uses ಪಣಿ/ಪಣಿಗೆ and contains a scheduling phrase whose level of commitment is open to interpretation. Both language and the affected labels need review."
+    }
+  },
+  {
+    "id": "synthetic-47",
+    "expected": {
+      "visit_fee": 400,
+      "visit_date": "2026-11-27",
+      "visit_time": "17:15",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "86efd57a2b0b8aa3f278d805cc8e622c89dc5a89154b8b802803579d79881dcd",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-48",
+    "expected": {
+      "visit_fee": 300,
+      "visit_date": null,
+      "visit_time": "10:00",
+      "enough_info": "no"
+    },
+    "transcriptSha256": "e20b3bd3d5409f3c4f6b1a48bdbd63cde354aa256ca04d37a6358651dcd7feda",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-49",
+    "expected": {
+      "visit_fee": 250,
+      "visit_date": null,
+      "visit_time": null,
+      "enough_info": "no"
+    },
+    "transcriptSha256": "cba73a443c044d0ac04ccda16af141023c9c798a229463e804ae290aa3ecfe47",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  },
+  {
+    "id": "synthetic-50",
+    "expected": {
+      "visit_fee": 200,
+      "visit_date": "2026-11-27",
+      "visit_time": "11:00",
+      "enough_info": "yes"
+    },
+    "transcriptSha256": "8257560e728256fea00331a672b742cb654e40da79c6f547a7e01ca37473702b",
+    "needs_adjudication": false,
+    "review_status": "assistant_labeled_awaiting_human_review",
+    "audit_review": {
+      "date": "2026-11-26",
+      "method": "Same-assistant source-to-label semantic re-read plus structural checks; not independent validation",
+      "status": "self_reviewed_pending_independent_review",
+      "exclude_from_strict_scoring": [],
+      "reason": "No additional clear semantic inconsistency found during this self-review. This does not establish native-language correctness or empirical model accuracy.",
+      "language_note": null
+    }
+  }
+]

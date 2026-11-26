@@ -1,0 +1,24 @@
+TRANSCRIPT INPUTS V4 - 18 NEW LABELED SYNTHETIC CALLS
+
+IDs synthetic-33 to synthetic-50. Five English, five Hindi, four Kannada and four Malayalam conversations; 12 speaker turns each. Two calls disconnect. These are invented examples styled after service enquiries, not real recordings. A fluent human should review non-English phrasing before these are treated as an approved benchmark.
+
+Dates: most cases use November 26, 2026 at 10:00 AM Asia/Kolkata. synthetic-40 deliberately uses December 31, 2026 at 6:00 PM for year-boundary reasoning. Use calledAt from each input; never substitute today's date.
+
+inputs.jsonl contains only model inputs: IDs, source, language, call date, timezone and transcript. No answers or rationales. The synthetic text is also available in individual files. expected-labels.json and expected-labels.jsonl are separate answer keys. manifest.json records case metadata and exact transcript hashes. label-review.tsv is a compact human review table.
+
+Labels: provider_response, visit_fee, fee_covers, repair_fee_min, repair_fee_max, repair_cost_notes, visit_date, visit_time, availability_as_said, summary, evidence, enough_info. These follow the current extraction fields, plus the evaluation-only enough_info field.
+
+enough_info policy version 3: yes means a supported visit offer with a clear day, useful arrival period (including morning, evening or a window), and a clear applicable visit fee or total-job quote. Exact clock time and a separate visit fee are not required. Free inspection qualifies when explicit. Unresolved fee eligibility, tentative or contradictory scheduling, and agent-only guesses do not qualify. A clear total-job estimate can qualify if its scope and estimated nature remain explicit. See evaluation/enough-info-policy.json. This is information for user review, not booking confirmation.
+
+Exact-value scoring targets: provider_response, visit_fee, repair_fee_min, repair_fee_max, visit_date, visit_time, enough_info. Free-text fields should be assessed semantically, not by exact spelling. Evidence must be an exact provider excerpt and support the claim; another valid supporting quote set may also be acceptable. Never send labels or rationale to the tested model.
+
+All labels are assistant-authored references awaiting independent human review, not proof of model accuracy. Genuine ambiguity is represented by null fields and explained in rationale. No case has been evaluated against a model. enough_info has not been added to production code; a future evaluation runner must explicitly derive it or request it in an evaluation-only schema.
+
+Earlier data is unchanged: the original 30 cases have reference labels, while the previous 12 synthetic-21 to synthetic-32 remain unlabeled. This new set adds 18 labeled cases only. Real-call data remains private under output/. No database, application code or UI was changed. No API requests or phone calls were made.
+
+Policy v3 labels include enough_info_basis outside expected, explaining timing and cost. visit_time stays null for broad periods. Combined costs never overwrite visit_fee or repair-only bounds. All 48 labeled cases are also available privately under output/evaluation/labeled-transcripts-all/. The previous 12 synthetic cases remain unlabeled.
+
+SYNTHETIC DATA AUDIT (November 26, 2026)
+All 50 synthetic transcripts and the 38 existing synthetic label sets were self-reviewed. Turn-aligned English translations and per-case findings: evaluation/transcript-audit/english-review.html. Machine-readable findings: evaluation/transcript-audit/audit-report.json.
+
+Three reference-label cases require adjudication: synthetic-04 (visit_fee), synthetic-07 (repair bounds), synthetic-46 (outcome, day and enough_info). These fields are listed in audit_review.exclude_from_strict_scoring; do not treat them as authoritative expected values until reviewed. Original text and expected field values were preserved. Language-naturalness concerns are also recorded. This is a same-assistant audit and translation, not independent fluent-human validation.

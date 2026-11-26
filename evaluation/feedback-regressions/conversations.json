@@ -1,0 +1,26 @@
+[
+  {
+    "id": "feedback-afternoon",
+    "transcript": "Agent: Can you come tomorrow? What is the visiting fee?\nYou: Tomorrow afternoon. Five hundred to inspect.\nAgent: Exactly three in the afternoon?\nYou: No exact time yet. Afternoon, I will call before leaving.",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "id": "feedback-discount-interrupted",
+    "transcript": "Agent: What is the visiting fee?\nYou: Four hundred just to check. If I do the work, that comes off the labour bill.\nAgent: Could you make it three hundred? And come tomorrow at eleven?\nYou: Tomorrow depends on my first job. About the three hundred, I can— [interrupted]\nAgent: Did you accept three hundred?\nYou: The signal— [call disconnected]",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "id": "feedback-discount-accepted",
+    "transcript": "Agent: What is your inspection fee?\nYou: Four hundred.\nAgent: Can you make it three hundred and come tomorrow at eleven in the morning?\nYou: Yes, three hundred for inspection, and tomorrow at eleven in the morning is confirmed.",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "id": "feedback-quote-withdrawn",
+    "transcript": "Agent: Inspection fee?\nYou: Four hundred. I can come tomorrow afternoon at three.\nAgent: This is across the railway bridge. Still four hundred?\nYou: No, not four hundred for that location. I will tell you the new fee after checking the pin. Tomorrow at three in the afternoon still works.",
+    "calledAt": "2026-11-26T10:00:00+05:30",
+    "timezone": "Asia/Kolkata"
+  }
+]

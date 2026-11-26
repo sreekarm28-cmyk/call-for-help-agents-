@@ -1,0 +1,14 @@
+Agent: Hi, is this Oak Electrical Services? I'm calling for a customer with a tripping kitchen circuit.
+You: Yes, don't let them keep resetting it. Where are they?
+Agent: Near the bus stand. What would you charge to inspect it?
+You: Three fifty to come and check. Parts and any proper repair are separate.
+Agent: Three thousand five hundred?
+You: No. Three hundred and fifty rupees. Not three thousand.
+Agent: Can you visit tomorrow morning at ten?
+You: Ten is booked. I can do one thirty tomorrow afternoon.
+Agent: Tomorrow afternoon, one thirty, inspection three fifty?
+You: Hold on, my assistant says he already booked that slot. Make it three thirty, afternoon.
+Agent: Three thirty tomorrow, same inspection fee?
+You: Yes, three thirty. Three hundred and fifty for checking. If it's just tightening a terminal, that's included.
+Agent: And if a breaker needs replacing?
+You: I'll quote that after testing. Don't put down a repair price yet.

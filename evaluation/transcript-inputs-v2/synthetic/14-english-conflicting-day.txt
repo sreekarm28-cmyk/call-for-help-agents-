@@ -1,0 +1,14 @@
+Agent: Hi, is this Bright Home Electricians? A customer needs a ceiling fan checked.
+You: Yes, but not today. Tomorrow afternoon should work.
+Agent: Tomorrow is Thursday, November twenty-sixth. Would four p.m. work?
+You: No, I meant Friday. I've lost track of the day. Friday the twenty-seventh.
+Agent: Friday at four, then?
+You: Between four and six. I can't give you an exact minute.
+Agent: What's the inspection fee?
+You: Two fifty, and if it's just the regulator connection I'll fix it in that.
+Agent: Does that include a new regulator?
+You: No, the part is extra. If the winding's gone, that's a separate job.
+Agent: Right, Friday twenty-seventh, four p.m., two hundred and fifty total?
+You: Four to six, not four sharp. Two fifty is the inspection and small connection work, not everything.
+Agent: Can I tell the customer you're definitely coming in that window?
+You: Yes, Friday between four and six. Send the location.
